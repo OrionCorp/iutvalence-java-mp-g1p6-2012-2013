@@ -32,7 +32,7 @@ public class Unite
 	public Unite() {
 		this.pointsAttaque = 10;
 		this.pointsVie = 25;
-		this.posX = 0;
+		this.posX = 0; /* Penser à les transformer en coordonées (x,y) */ 
 		this.posY = 0;
 	}
 }
