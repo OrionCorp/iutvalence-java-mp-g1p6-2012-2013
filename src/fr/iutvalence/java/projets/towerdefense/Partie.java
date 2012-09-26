@@ -33,6 +33,6 @@ public class Partie
 	/**
 	 * Score de l'utilisateur
 	 */
-	private Integer score = 0;
+	private int score = 0;
 }
 

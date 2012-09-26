@@ -15,4 +15,6 @@ public class Matrice
 	 * Longueur maximale de l'ordonnée de la carte
 	 */
 	public final static int LONG_ORD = 20;
+	
+	
 }
