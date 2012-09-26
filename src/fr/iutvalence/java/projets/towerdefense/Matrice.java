@@ -1,5 +1,6 @@
 package fr.iutvalence.java.projets.towerdefense;
 
+//FIXME que faut-il entendre par "trames du jeu" ?
 /**
  * Permet de manipuler les différentes trames du jeu.
  * @author Teddy Gustiaux & Alister Desvergnes.
@@ -64,13 +65,17 @@ public class Matrice
 	 */
 	public final static int HAUTEUR_MAX = 20;
 	
-	
+	// FIXME écrire un commentaire correct
 	private int largeur;
 	
+	// FIXME écrire un commentaire correct
 	private int hauteur;
 	
+	// FIXME écrire un commentaire correct
 	private int[][] matrice;
 	
+	// FIXME écrire un commentaire correct
+	// FIXME remplacer par un type Chemin contenant le point de départ et les directions successives 
 	private int[] chemin;
 	
 	

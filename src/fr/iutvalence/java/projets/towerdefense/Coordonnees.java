@@ -16,6 +16,7 @@ public class Coordonnees
 	 */
 	private final int y;
 
+	// FIXME écrire un commentaire correct
 	/**
 	 * Permet de définir un objet Coordonnées
 	 * @param x : entier (abscisse)
@@ -28,6 +29,7 @@ public class Coordonnees
 		this.y = y;
 	}
 
+	// FIXME écrire un commentaire correct
 	/**
 	 * Permet de connaître la position en abscisse
 	 * @return entier
@@ -37,6 +39,7 @@ public class Coordonnees
 		return this.x;
 	}
 
+	// FIXME écrire un commentaire correct
 	/**
 	 * Permet de connaître la position en ordonnée
 	 * @return entier
@@ -46,6 +49,7 @@ public class Coordonnees
 		return this.y;
 	}
 
+	// FIXME écrire un commentaire correct
 	public String toString()
 	{
 		return "("+this.x + ","+this.y+")";
