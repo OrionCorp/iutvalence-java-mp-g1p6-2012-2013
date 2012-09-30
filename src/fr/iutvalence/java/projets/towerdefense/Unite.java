@@ -2,23 +2,35 @@ package fr.iutvalence.java.projets.towerdefense;
 
 /**
  * Gère les unités
+ *
  * @author Teddy Gustiaux & Alister Desvergnes.
  */
 public class Unite
 {
+
+	/* VARIABLES UNITE DEFAULT ------------------------------ */
 	
-	// FIXME déclarer l'attribut en privé
+	/**
+	 * Points de vie par defaut de l'unité de niveau 1
+	 */
+	private final static int PV_UNITE_DEFAULT = 25;
+	
+	/**
+	 * Points d'attaque par defaut de l'unité de niveau 1
+	 */
+	private final static int PA_UNITE_DEFAULT = 10;
+	
+	/* VARIABLES UNITE ------------------------------ */
+	
 	/**
 	 * Points d'attaque de l'unité
 	 */
-	int pointsAttaque; 
+	private int pointsAttaque; 
 
-	// FIXME déclarer l'attribut en privé
 	/**
 	 * Points de vie de l'unité
 	 */
-	int pointsVie;
-	
+	private int pointsVie;
 	
 	// FIXME remplacer par un attribut de type Coordonnees
 	/**
@@ -36,10 +48,9 @@ public class Unite
 	 */
 	public Unite() {
 		
-		// FIXME définir des constantes pour les valeurs par défaut
-		this.pointsAttaque = 10;
-		this.pointsVie = 25;
-		this.posX = 0; /* Penser à les transformer en coordonées (x,y) */ 
+		this.pointsVie = PV_UNITE_DEFAULT;
+		this.pointsAttaque = PA_UNITE_DEFAULT;
+		this.posX = 0; 
 		this.posY = 0;
 	}
 }

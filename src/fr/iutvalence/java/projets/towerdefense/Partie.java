@@ -2,24 +2,15 @@ package fr.iutvalence.java.projets.towerdefense;
 
 /**
  * Permet la definition d'une partie.
+ *
  * @author Teddy Gustiaux & Alister Desvergnes.
- * @version 0.1
  */
 public class Partie
 {
-	//FIXME d'il y a plusieurs tours, changer le nom de la constante
 	/**
 	 * Nombre maximal de tours de jeu
 	 */
-	public final static int NB_TOUR_JEU = 10;
-	
-	
-	//FIXME pourquoi borner le score ? pour que la partie se termine ?
-	/**
-	 * Score maximal d'une partie
-	 */
-	public final static int SCORE_MAX = 100000;
-	
+	public final static int NBMAX_TOUR_JEU = 10;
 	
 	/**
 	 * Nombre maximal d'unités sur la carte
@@ -27,9 +18,9 @@ public class Partie
 	public final static int NB_MAX_UNITS = 50;
 	
 	/**
-	 * Nombre maximal de tours sur la carte
+	 * Nombre maximal de towers sur la carte
 	 */
-	public final static int NB_MAX_TOWERS = 40;
+	public final static int NB_MAX_TOWERS = 25;
 	
 	
 	//FIXME à mettre dans un type Joueur
@@ -39,7 +30,7 @@ public class Partie
 	private String pseudo = "Joueur";
 	
 	/**
-	 * Score de l'utilisateur
+	 * Score du joueur
 	 */
 	private int score = 0;
 	
