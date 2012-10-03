@@ -2,6 +2,7 @@ package fr.iutvalence.java.projets.towerdefense;
 
 /**
  * Permet de gérer les coordonnées
+ *
  * @author Teddy Gustiaux & Alister Desvergnes.
  */
 public class Coordonnees
@@ -17,7 +18,8 @@ public class Coordonnees
 	private final int y;
 
 	/**
-	 * Permet de définir un objet Coordonnées
+	 * Permet de définir un objet "Coordonnees" composé de deux entiers donnée en paramètres
+	 *
 	 * @param x : entier (abscisse)
 	 * @param y : entier (ordonnée)
 	 */
@@ -29,8 +31,9 @@ public class Coordonnees
 	}
 
 	/**
-	 * Permet de connaître la position en abscisse
-	 * @return entier
+	 * Renvoi un entier correspondant à l'abscisse de l'objet
+	 *
+	 * @return entier (abscisse)
 	 */
 	public int getX()
 	{
@@ -38,14 +41,21 @@ public class Coordonnees
 	}
 
 	/**
-	 * Permet de connaître la position en ordonnée
-	 * @return entier
+	 * Renvoi un entier correspondant à ll'ordonée de l'objet
+	 *
+	 * @return entier (ordonnée)
 	 */
 	public int getY()
 	{
 		return this.y;
 	}
 
+	/**
+	 * Renvoi une chaine de caractères correspondant à la postion de l'objet
+	 * La chaine est composé de l'abscisse et de l'ordonée (des entiers)
+	 *
+	 * @return chaine (abscisse, ordonée)
+	 */
 	public String toString()
 	{
 		return "("+this.x + ","+this.y+")";

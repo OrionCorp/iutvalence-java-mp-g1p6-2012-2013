@@ -2,6 +2,7 @@ package fr.iutvalence.java.projets.towerdefense;
 
 /**
  * Permet de tester les coordonnées
+ *
  * @author Teddy Gustiaux & Alister Desvergnes.
  */
 public class TestCoordonnees
@@ -9,6 +10,7 @@ public class TestCoordonnees
 
 	/**
 	 * Test des coordonnées
+	 *
 	 * @param args
 	 */
 	public static void main(String[] args)
