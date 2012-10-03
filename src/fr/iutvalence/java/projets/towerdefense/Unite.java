@@ -32,16 +32,10 @@ public class Unite
 	 */
 	private int pointsVie;
 	
-	// FIXME remplacer par un attribut de type Coordonnees
 	/**
-	 * Abscisse de l'unité
+	 * Emplacement de l'unité, représenté par un objet "Coordonnees"
 	 */
-	int posX;
-	
-	/**
-	 * Ordonée de l'unité
-	 */
-	int posY;
+	Coordonnees pos;
 	
 	/**
 	 * Constructeur par défaut : Créer une unité de niveau 1
@@ -50,7 +44,6 @@ public class Unite
 		
 		this.pointsVie = PV_UNITE_DEFAULT;
 		this.pointsAttaque = PA_UNITE_DEFAULT;
-		this.posX = 0; 
-		this.posY = 0;
+		this.pos = POSITION_UNITE;
 	}
 }
