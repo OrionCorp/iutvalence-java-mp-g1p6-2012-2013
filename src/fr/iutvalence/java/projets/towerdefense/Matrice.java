@@ -1,36 +1,13 @@
 package fr.iutvalence.java.projets.towerdefense;
 
-//FIXME que faut-il entendre par "trames du jeu" ?
+import java.util.Arrays;
+
 /**
- * Permet de manipuler les différentes trames du jeu.
+ * Permet de gérer la carte du jeu.
  * @author Teddy Gustiaux & Alister Desvergnes.
- * @version 0.1
  */
 public class Matrice
 {
-	/* VARIABLES DE DEPLACEMENT ------------------------------ */
-	
-	/**
-	 * Correspond a un déplacement vers le bas
-	 */
-	public final static int BAS = 0;
-	
-	/**
-	 * Correspond a un déplacement vers le haut
-	 */
-	public final static int HAUT = 1;
-	
-	/**
-	 * Correspond a un déplacement vers le gauche
-	 */
-	public final static int GAUCHE = 2;
-	
-	/**
-	 * Correspond a un déplacement vers le droite
-	 */
-	public final static int DROITE = 3;
-	
-
 	/* VARIABLES DE DECOR ------------------------------ */
 	
 	/**
@@ -65,18 +42,42 @@ public class Matrice
 	 */
 	public final static int HAUTEUR_MAX = 20;
 	
-	// FIXME écrire un commentaire correct
-	private int largeur;
+	/**
+	 * Largeur de la carte
+	 */
+	private final int largeur;
 	
-	// FIXME écrire un commentaire correct
-	private int hauteur;
+	/**
+	 * Hauteur de la carte
+	 */
+	private final int hauteur;
 	
-	// FIXME écrire un commentaire correct
+	/**
+	 * Représente la carte (tableau à deux dimensions) telle qu'elle sera affichée
+	 */
 	private int[][] matrice;
 	
-	// FIXME écrire un commentaire correct
-	// FIXME remplacer par un type Chemin contenant le point de départ et les directions successives 
-	private int[] chemin;
+	/**
+	 * Chemin contenant le point de départ et les directions successives
+	 */ 
+	private Chemin cheminEmprunte;
+
+	/**
+	 * Constructeur de la carte de jeu, qui retourne la matrice et le chemin emprunté
+	 * par les unités
+	 */ 
+	public Matrice(int i, int j, Chemin chemin)
+	{
+		// TODO Créer le constructueur permettant la création d'une carte
+	}
+
+	public String toString()
+	{
+		// TODO Modifier le constructeur toString() afin de pouvoir afficher la
+		// carte correctement dans TestMatrice. 
+	}
+
+	
 	
 	
 }

@@ -20,6 +20,11 @@ public class Unite
 	 */
 	private final static int PA_UNITE_DEFAULT = 10;
 	
+	/**
+	 * Position initiale des unités spawnant
+	 */
+	private final static Coordonnees POSITION_UNITE = new Coordonnees(0,0);
+	
 	/* VARIABLES UNITE ------------------------------ */
 	
 	/**

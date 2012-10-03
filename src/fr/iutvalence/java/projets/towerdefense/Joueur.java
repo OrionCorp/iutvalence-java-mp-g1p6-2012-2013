@@ -11,6 +11,6 @@ public class Joueur {
 	/**
 	 * Nom par défaut attribué au joueur
 	 */
-	private final static string NOM_JOUEUR_DEFAUT = Joueur;
+	private final static String NOM_JOUEUR_DEFAUT = "Joueur";
 
 }

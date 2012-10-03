@@ -1,7 +1,5 @@
 package fr.iutvalence.java.projets.towerdefense;
 
-//TODO Renommer en Tower.java
-
 /**
  * Permet de manipuler toutes les tours du jeu
  *

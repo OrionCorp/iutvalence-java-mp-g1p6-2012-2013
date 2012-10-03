@@ -15,19 +15,12 @@ public class Partie
 	/**
 	 * Nombre maximal d'unités sur la carte
 	 */
-	public final static int NB_MAX_UNITS = 50;
+	public final static int NBMAX_UNITS = 50;
 	
 	/**
 	 * Nombre maximal de towers sur la carte
 	 */
-	public final static int NB_MAX_TOWERS = 25;
-	
-	
-	//FIXME à mettre dans un type Joueur
-	/**
-	 * Pseudonyme de l'utilisateur
-	 */	
-	private String pseudo = "Joueur";
+	public final static int NBMAX_TOWERS = 25;
 	
 	/**
 	 * Score du joueur
