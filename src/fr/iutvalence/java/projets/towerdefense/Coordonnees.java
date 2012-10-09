@@ -3,7 +3,6 @@ package fr.iutvalence.java.projets.towerdefense;
 /**
  * Permet de gérer les coordonnées
  *
- * @author Teddy Gustiaux & Alister Desvergnes.
  */
 public class Coordonnees
 {
@@ -60,6 +59,4 @@ public class Coordonnees
 	{
 		return "("+this.x + ","+this.y+")";
 	}
-
-	
 }

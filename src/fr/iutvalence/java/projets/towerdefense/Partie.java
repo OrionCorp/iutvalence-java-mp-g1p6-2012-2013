@@ -3,7 +3,6 @@ package fr.iutvalence.java.projets.towerdefense;
 /**
  * Permet la definition d'une partie.
  *
- * @author Teddy Gustiaux & Alister Desvergnes.
  */
 public class Partie
 {

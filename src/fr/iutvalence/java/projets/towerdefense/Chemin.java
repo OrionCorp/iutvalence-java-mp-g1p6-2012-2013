@@ -3,7 +3,6 @@ package fr.iutvalence.java.projets.towerdefense;
 /**
  * Permet de gérer le chemin de déplacement dans la carte
  *
- * @author Teddy Gustiaux & Alister Desvergnes.
  */
 public class Chemin
 {

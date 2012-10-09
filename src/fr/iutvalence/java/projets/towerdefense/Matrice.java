@@ -1,10 +1,8 @@
 package fr.iutvalence.java.projets.towerdefense;
 
-//FIXME que faut-il entendre par "trames du jeu" ?
 /**
- * Permet de manipuler les différentes trames du jeu.
- * @author Teddy Gustiaux & Alister Desvergnes.
- * @version 0.1
+ * Permet de gérer la carte du jeu ici considérée comme une matrice
+ * 
  */
 public class Matrice
 {
@@ -65,18 +63,48 @@ public class Matrice
 	 */
 	public final static int HAUTEUR_MAX = 20;
 	
-	// FIXME écrire un commentaire correct
-	private int largeur;
+	/**
+	 * Largeur de la carte
+	 */
+	private final int largeur;
 	
-	// FIXME écrire un commentaire correct
-	private int hauteur;
+	/**
+	 * Hauteur de la carte
+	 */
+	private final int hauteur;
 	
-	// FIXME écrire un commentaire correct
-	private int[][] matrice;
+	/**
+	 * Hauteur de la carte
+	 */
+	private final Chemin chemin;
 	
-	// FIXME écrire un commentaire correct
-	// FIXME remplacer par un type Chemin contenant le point de départ et les directions successives 
-	private int[] chemin;
+	/**
+	 * Tableau d'entiers à double dimensions : représente la matrice.
+	 */
+	private int[][] background;
 	
+	public Matrice(int largeur, int hauteur, Chemin chemin, int[][] background)
+	{
+		super();
+		this.largeur = largeur;
+		this.hauteur = hauteur;
+		this.chemin =  chemin;
+		this.background = background;
+	}
 	
+	/**
+	 * Affiche la representation graphique de la matrice
+	 *
+	 */
+	public static void afficherBackgroundMatrice(Matrice matrice)
+	{	
+		for (int i = 0; i < matrice.hauteur; i++){
+			for (int j = 0; j < matrice.largeur; j++){
+				System.out.print(matrice.background[i][j]);
+				System.out.print(" ");
+			}
+			System.out.print("\n");
+		}
+	}
+
 }

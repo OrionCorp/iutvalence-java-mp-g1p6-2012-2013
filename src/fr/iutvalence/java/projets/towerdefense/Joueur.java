@@ -3,7 +3,6 @@ package fr.iutvalence.java.projets.towerdefense;
 /**
  * Gère les joueurs
  *
- * @author Teddy Gustiaux & Alister Desvergnes.
  */
 
 public class Joueur {
