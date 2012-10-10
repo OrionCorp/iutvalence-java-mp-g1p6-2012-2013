@@ -1,4 +1,6 @@
-package fr.iutvalence.java.projets.towerdefense;
+package fr.iutvalence.java.projets.towerdefense.tests;
+
+import fr.iutvalence.java.projets.towerdefense.Coordonnees;
 
 /**
  * Permet de tester les coordonnées

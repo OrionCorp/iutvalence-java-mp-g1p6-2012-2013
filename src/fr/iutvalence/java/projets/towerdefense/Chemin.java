@@ -1,3 +1,5 @@
+// FIXME (général) naviguer dans la doc et corriger si besoin
+
 package fr.iutvalence.java.projets.towerdefense;
 
 /**

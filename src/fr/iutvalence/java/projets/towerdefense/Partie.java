@@ -1,5 +1,6 @@
 package fr.iutvalence.java.projets.towerdefense;
 
+// FIXME détailler un peu le commentaire
 /**
  * Permet la definition d'une partie.
  */
@@ -20,12 +21,14 @@ public class Partie
 	 */
 	public final static int NBMAX_TOWERS = 25;
 	
+	// FIXME initialisation des attributs dans le constructeur
 	/**
 	 * Score du joueur
 	 */
 	private int score = 0;
 	
+	// FIXME autres attributs ?
 	
-	//FIXME constructeurs, méthodes ?
+	// FIXME constructeurs, méthodes ?
 }
 

@@ -1,4 +1,10 @@
-package fr.iutvalence.java.projets.towerdefense;
+package fr.iutvalence.java.projets.towerdefense.tests;
+
+
+import fr.iutvalence.java.projets.towerdefense.Chemin;
+import fr.iutvalence.java.projets.towerdefense.Coordonnees;
+import fr.iutvalence.java.projets.towerdefense.Matrice;
+
 
 /**
  * Permet de tester la carte de jeu
@@ -7,7 +13,7 @@ package fr.iutvalence.java.projets.towerdefense;
 public class TestMatrice
 {
 
-	/** Créer une matrice, la remplire et l'affiche
+	/** Créer une matrice, la remplir et l'affiche
 	 * @param args
 	 */
 	public static void main(String[] args)

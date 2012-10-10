@@ -1,9 +1,8 @@
 package fr.iutvalence.java.projets.towerdefense;
 
 /**
- * Permet de gérer les matrice
  * Une matrice est une carte de jeu, elle est composée d'une taille (hauteur, largeur), d'un chemmin (définissant le
- * chemin que les unités deveront suivre) ainsi qu'un background (décor de la carte du jeu)
+ * chemin que les unités devront suivre) ainsi qu'un background (décor de la carte du jeu)
  * 
  */
 public class Matrice
@@ -23,6 +22,8 @@ public class Matrice
 	
 	/* VARIABLES DE DECOR ------------------------------ */
 	
+	
+	// FIXME (à la fin) définir sous la forme d'une énumération
 	/**
 	 * Correspond au décor terre
 	 */
@@ -56,7 +57,7 @@ public class Matrice
 	private final int hauteur;
 	
 	/**
-	 *	Chemin que les unités deveront suivre afin de traverser la matrice de jeu
+	 *	Chemin que les unités devront suivre afin de traverser la matrice de jeu
 	 */
 	private final Chemin chemin;
 	
@@ -65,13 +66,14 @@ public class Matrice
 	 */
 	private int[][] background;
 	
+	// FIXME corriger (FIXED)
 	/**
-	 * Matrice : contient le décor de la carte de jeu ainsi que le chemin que les unités deveront suivre
+	 * Genère une matrice d'une taille, d'un chemin et d'un background donnés  
 	 * 
-	 * @param hauteur : permet de définir la hauteur de la matrice 
-	 * @param largeur : permet de définir la largeur de la matrice
-	 * @param chemin : donner le chemin que les unités deveront parcouriri afin de traverser la matrice
-	 * @param background : contient le décor de la matrice de jeu
+	 * @param hauteur la hauteur de la matrice 
+	 * @param largeur la largeur de la matrice
+	 * @param chemin le chemin que les unités deveront parcouriri afin de traverser la matrice
+	 * @param background le décor de la matrice de jeu
 	 */
 	public Matrice(int hauteur, int largeur, Chemin chemin, int[][] background)
 	{
@@ -82,22 +84,35 @@ public class Matrice
 		this.background = background;
 	}
 	
+	// FIXME remplacer par une redéfinition de toString()
 	/**
 	 * Affiche la representation graphique de la matrice
 	 * Parcours le matrice.background (un tableau à double dimensions) afin d'en afficher le contenu
 	 * 
-	 * @param matrice : la matrice dont on veut afficher le backgorund
 	 *
 	 */
-	public static void afficherBackgroundMatrice(Matrice matrice)
+	public void afficherBackground()
 	{	
-		for (int i = 0; i < matrice.hauteur; i++){						// Parcours le premier tableau
-			for (int j = 0; j < matrice.largeur; j++){					// Parcours le second tableau 
-				System.out.print(matrice.background[i][j]);				
+		for (int i = 0; i < this.hauteur; i++){					// Parcours le premier tableau
+			for (int j = 0; j < this.largeur; j++){				// Parcours le second tableau 
+				System.out.print(this.background[i][j]);				
 				System.out.print(" ");
 			}
-			System.out.print("\n");										// Permet de revenir à la ligne au moment de passer à la ligne suivante du tableau
+			System.out.print("\n");					 			// Permet de revenir à la ligne au moment de passer à la ligne suivante du tableau
 		}
 	}
-
+	
+	/**
+	 * Renvoie les coordonnées successives que les unités deveront suivre afin de traverser la matrice 
+	 * 
+	 * @return un tableau contenant toutes les coordonnées
+	 */
+	public  Coordonnees[] coordonneesChemin(){
+		
+		int[] res = {};
+		
+		
+		
+		return res;
+	}
 }
