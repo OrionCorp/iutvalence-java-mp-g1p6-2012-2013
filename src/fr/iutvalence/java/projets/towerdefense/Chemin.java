@@ -51,4 +51,18 @@ public class Chemin
 		this.coorDepart = coorDepart;
 		this.tabDeplacements = tabDeplacements;
 	}
+	
+	
+	//TODO A compléter
+	/**
+	 * Renvoie les coordonnées successives que les unités deveront suivre afin de traverser la matrice 
+	 * 
+	 * @return un tableau contenant toutes les coordonnées
+	 */
+	public  Coordonnees[] coordonneesChemin(){
+		
+		Coordonnees[] res = {};
+		
+		return res;
+	}
 }

@@ -45,6 +45,7 @@ public class Unite
 	 */
 	public Unite() {
 		
+		super();
 		this.pointsVie = PV_UNITE_DEFAULT;
 		this.pointsAttaque = PA_UNITE_DEFAULT;
 		this.pos = POSITION_UNITE;

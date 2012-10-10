@@ -35,6 +35,8 @@ public class TestMatrice
 		
 		Matrice carte = new Matrice(9, 10, chemin, background);
 		
-		Matrice.afficherBackgroundMatrice(carte); // On affiche la matrice
+		//Matrice.afficherBackground(carte); // On affiche la matrice
+		
+		System.out.print(carte);
 	}
 }

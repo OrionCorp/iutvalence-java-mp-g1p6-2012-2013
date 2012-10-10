@@ -44,7 +44,7 @@ public class Matrice
 	 */
 	public final static int MUR = 14;
 	
-	/* VARIABLES DE CARTE ------------------------------ */
+	/* VARIABLES DE MATRICE ------------------------------ */
 			
 	/**
 	 * Largeur de la matrice de jeu
@@ -66,7 +66,7 @@ public class Matrice
 	 */
 	private int[][] background;
 	
-	// FIXME corriger (FIXED)
+	// FIXME (FIXED) corriger
 	/**
 	 * Genère une matrice d'une taille, d'un chemin et d'un background donnés  
 	 * 
@@ -84,35 +84,23 @@ public class Matrice
 		this.background = background;
 	}
 	
-	// FIXME remplacer par une redéfinition de toString()
+	// FIXME (FIXED) remplacer par une redéfinition de toString() 
+	
 	/**
 	 * Affiche la representation graphique de la matrice
 	 * Parcours le matrice.background (un tableau à double dimensions) afin d'en afficher le contenu
-	 * 
-	 *
 	 */
-	public void afficherBackground()
-	{	
+	public String toString()
+	{
+		String res = "";
+		
 		for (int i = 0; i < this.hauteur; i++){					// Parcours le premier tableau
 			for (int j = 0; j < this.largeur; j++){				// Parcours le second tableau 
-				System.out.print(this.background[i][j]);				
-				System.out.print(" ");
+				res = res +this.background[i][j];				
+				res = res +" ";
 			}
-			System.out.print("\n");					 			// Permet de revenir à la ligne au moment de passer à la ligne suivante du tableau
-		}
-	}
-	
-	/**
-	 * Renvoie les coordonnées successives que les unités deveront suivre afin de traverser la matrice 
-	 * 
-	 * @return un tableau contenant toutes les coordonnées
-	 */
-	public  Coordonnees[] coordonneesChemin(){
-		
-		int[] res = {};
-		
-		
-		
+			res = res +"\n";					 				// Permet de revenir à la ligne au moment de passer à la ligne suivante du tableau
+		}	
 		return res;
 	}
 }
