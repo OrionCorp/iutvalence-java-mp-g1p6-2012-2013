@@ -2,7 +2,6 @@ package fr.iutvalence.java.projets.towerdefense;
 
 /**
  * Permet de manipuler toutes les tours du jeu
- *
  */
  
 public class Tower

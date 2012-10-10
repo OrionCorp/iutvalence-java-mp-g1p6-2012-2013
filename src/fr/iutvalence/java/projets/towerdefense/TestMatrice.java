@@ -16,18 +16,18 @@ public class TestMatrice
 		int[] parcours = new int[] {Chemin.DROITE, Chemin.DROITE, Chemin.DROITE, Chemin.DROITE, Chemin.DROITE, Chemin.DROITE, Chemin.DROITE, Chemin.DROITE, Chemin.DROITE, Chemin.DROITE};
 		Chemin chemin = new Chemin(pointDepart, parcours);
 		int[][] background = new int[][]{
-											{11,11,11,11,11,11,11,11,11,11},
-											{11,11,11,11,11,11,11,11,11,11},
-											{11,11,11,11,11,11,11,11,11,11},
-											{11,11,11,11,11,11,11,11,11,11},
-											{13,13,13,13,13,13,13,13,13,13},
-											{11,11,11,11,11,11,11,11,11,11},
-											{11,11,11,11,11,11,11,11,11,11},
-											{11,11,11,11,11,11,11,11,11,11},
-											{11,11,11,11,11,11,11,11,11,11},
+											{Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE},
+											{Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE},
+											{Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE},
+											{Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE},
+											{Matrice.ROUTE,Matrice.ROUTE,Matrice.ROUTE,Matrice.ROUTE,Matrice.ROUTE,Matrice.ROUTE,Matrice.ROUTE,Matrice.ROUTE,Matrice.ROUTE,Matrice.ROUTE},
+											{Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE},
+											{Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE},
+											{Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE},
+											{Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE,Matrice.TERRE},
 										};
 		
-		Matrice carte = new Matrice(10, 9, chemin, background);
+		Matrice carte = new Matrice(9, 10, chemin, background);
 		
 		Matrice.afficherBackgroundMatrice(carte); // On affiche la matrice
 	}

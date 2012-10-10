@@ -1,34 +1,26 @@
 package fr.iutvalence.java.projets.towerdefense;
 
 /**
- * Permet de gérer la carte du jeu ici considérée comme une matrice
+ * Permet de gérer les matrice
+ * Une matrice est une carte de jeu, elle est composée d'une taille (hauteur, largeur), d'un chemmin (définissant le
+ * chemin que les unités deveront suivre) ainsi qu'un background (décor de la carte du jeu)
  * 
  */
 public class Matrice
 {
-	/* VARIABLES DE DEPLACEMENT ------------------------------ */
+	/* CONSTANTES --------------------------------------- */
 	
 	/**
-	 * Correspond a un déplacement vers le bas
+	 * Largeur maximale de la matrice de jeu
 	 */
-	public final static int BAS = 0;
+	public final static int LARGEUR_MAX = 30;
 	
 	/**
-	 * Correspond a un déplacement vers le haut
+	 * Hauteur maximale de la matrice de jeu
 	 */
-	public final static int HAUT = 1;
+	public final static int HAUTEUR_MAX = 20;
 	
-	/**
-	 * Correspond a un déplacement vers le gauche
-	 */
-	public final static int GAUCHE = 2;
 	
-	/**
-	 * Correspond a un déplacement vers le droite
-	 */
-	public final static int DROITE = 3;
-	
-
 	/* VARIABLES DE DECOR ------------------------------ */
 	
 	/**
@@ -54,36 +46,34 @@ public class Matrice
 	/* VARIABLES DE CARTE ------------------------------ */
 			
 	/**
-	 * Largeur maximale de la carte
-	 */
-	public final static int LARGEUR_MAX = 30;
-	
-	/**
-	 * Hauteur maximale de la carte
-	 */
-	public final static int HAUTEUR_MAX = 20;
-	
-	/**
-	 * Largeur de la carte
+	 * Largeur de la matrice de jeu
 	 */
 	private final int largeur;
 	
 	/**
-	 * Hauteur de la carte
+	 * Hauteur de la matrice de jeu
 	 */
 	private final int hauteur;
 	
 	/**
-	 * Hauteur de la carte
+	 *	Chemin que les unités deveront suivre afin de traverser la matrice de jeu
 	 */
 	private final Chemin chemin;
 	
 	/**
-	 * Tableau d'entiers à double dimensions : représente la matrice.
+	 * Tableau d'entiers à double dimensions : représente le décor matrice.
 	 */
 	private int[][] background;
 	
-	public Matrice(int largeur, int hauteur, Chemin chemin, int[][] background)
+	/**
+	 * Matrice : contient le décor de la carte de jeu ainsi que le chemin que les unités deveront suivre
+	 * 
+	 * @param hauteur : permet de définir la hauteur de la matrice 
+	 * @param largeur : permet de définir la largeur de la matrice
+	 * @param chemin : donner le chemin que les unités deveront parcouriri afin de traverser la matrice
+	 * @param background : contient le décor de la matrice de jeu
+	 */
+	public Matrice(int hauteur, int largeur, Chemin chemin, int[][] background)
 	{
 		super();
 		this.largeur = largeur;
@@ -94,16 +84,19 @@ public class Matrice
 	
 	/**
 	 * Affiche la representation graphique de la matrice
+	 * Parcours le matrice.background (un tableau à double dimensions) afin d'en afficher le contenu
+	 * 
+	 * @param matrice : la matrice dont on veut afficher le backgorund
 	 *
 	 */
 	public static void afficherBackgroundMatrice(Matrice matrice)
 	{	
-		for (int i = 0; i < matrice.hauteur; i++){
-			for (int j = 0; j < matrice.largeur; j++){
-				System.out.print(matrice.background[i][j]);
+		for (int i = 0; i < matrice.hauteur; i++){						// Parcours le premier tableau
+			for (int j = 0; j < matrice.largeur; j++){					// Parcours le second tableau 
+				System.out.print(matrice.background[i][j]);				
 				System.out.print(" ");
 			}
-			System.out.print("\n");
+			System.out.print("\n");										// Permet de revenir à la ligne au moment de passer à la ligne suivante du tableau
 		}
 	}
 

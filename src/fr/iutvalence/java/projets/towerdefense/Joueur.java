@@ -2,7 +2,6 @@ package fr.iutvalence.java.projets.towerdefense;
 
 /**
  * Gère les joueurs
- *
  */
 
 public class Joueur {

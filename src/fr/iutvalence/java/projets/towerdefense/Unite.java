@@ -2,7 +2,6 @@ package fr.iutvalence.java.projets.towerdefense;
 
 /**
  * Gère les unités
- *
  */
 public class Unite
 {

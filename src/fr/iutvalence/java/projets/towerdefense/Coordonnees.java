@@ -2,7 +2,6 @@ package fr.iutvalence.java.projets.towerdefense;
 
 /**
  * Permet de gérer les coordonnées
- *
  */
 public class Coordonnees
 {

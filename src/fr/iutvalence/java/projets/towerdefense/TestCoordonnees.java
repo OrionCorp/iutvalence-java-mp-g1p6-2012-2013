@@ -2,7 +2,6 @@ package fr.iutvalence.java.projets.towerdefense;
 
 /**
  * Permet de tester les coordonnées
- *
  */
 public class TestCoordonnees
 {
