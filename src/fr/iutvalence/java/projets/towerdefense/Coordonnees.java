@@ -61,7 +61,39 @@ public class Coordonnees
 		return "("+this.x + ","+this.y+")";
 	}
 	
-	// FIXME redéfinir equals et hashCode
+	// FIXME (FIXED) redéfinir equals et hashCode
+	
+	/**
+	 * @see java.lang.Object#hashCode()
+	 */
+	public int hashCode()
+	{
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + this.x;
+		result = prime * result + this.y;
+		return result;
+	}
+
+	/**
+	 * Permet de savoir si deux coordonnées sont égales ou non
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	public boolean equals(Object obj)
+	{
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Coordonnees other = (Coordonnees) obj;
+		if (this.x != other.x)
+			return false;
+		if (this.y != other.y)
+			return false;
+		return true;
+	}
 	
 	// FIXME écrire (dans une autre classe) une application de test basique
 }

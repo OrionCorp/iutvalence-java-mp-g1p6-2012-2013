@@ -62,9 +62,10 @@ public class Matrice
 	private final Chemin chemin;
 	
 	
-	// FIXME détailler le commentaire (contenu des cases)
+	// FIXME (FIXED) détailler le commentaire (contenu des cases)
 	/**
 	 * Tableau d'entiers à double dimensions : représente le décor matrice.
+	 * Contient des des entiers qui représentent le décor
 	 */
 	private int[][] background;
 	
@@ -86,10 +87,11 @@ public class Matrice
 		this.background = background;
 	}
 	
-	// FIXME corriger le commentaire (rien n'est affiché)
+	// FIXME (FIXED) corriger le commentaire (rien n'est affiché)
+
 	/**
-	 * Affiche la representation graphique de la matrice
-	 * Parcours le matrice.background (un tableau à double dimensions) afin d'en afficher le contenu
+	 * Renvoie une chaîne qui contient la représentation du background de la matrice
+	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
 	{
@@ -104,6 +106,48 @@ public class Matrice
 		}	
 		return res;
 	}
+
+	/**
+	 * Permet de connaître l'élément de la carte à des coordonnées données
+	 * @param c Un objet de type Coordonnées
+	 * @return Un entier représentant l'élément (décor, chemin) aux coordonnées données
+	 */
+	public int getBackgroundAt(Coordonnees c) throws CoordonneesMatriceException
+	{
+		if (c.getX() > getLargeur() || c.getX() < 0 || c.getY() > getHauteur() || c.getY() < 0 )
+		{
+			throw new CoordonneesMatriceException();
+		}
+		return this.background[c.getX()][c.getY()];
+	}
+
+	/**
+	 * Permet d'obtenir la largeur de la carte
+	 * @return Entier représentant la largeur de la carte
+	 */
+	public int getLargeur()
+	{
+		return this.largeur;
+	}
+
+	/**
+	 * Permet d'obtenir la hauteur de la carte
+	 * @return Entier représentant la hauteur de la carte
+	 */
+	public int getHauteur()
+	{
+		return this.hauteur;
+	}
+
+	/**
+	 * Permet d'obtneir le chemin parcouru par les unités
+	 * @return Le chemin qui sera parcouru par les unités
+	 */
+	public Chemin getChemin()
+	{
+		return this.chemin;
+	}
 	
-	// FIXME ajouter des accesseurs sur les attributs
+	// FIXME (FIXED) ajouter des accesseurs sur les attributs
+	
 }

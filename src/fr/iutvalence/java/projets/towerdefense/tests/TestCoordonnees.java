@@ -10,8 +10,7 @@ public class TestCoordonnees
 {
 	// FIXME compléter le commentaire
 	/**
-	 * Test des coordonnées
-	 *
+	 * Création d'un objet Coordonnées que l'on va afficher à des fins de test 
 	 * @param args
 	 */
 	public static void main(String[] args)

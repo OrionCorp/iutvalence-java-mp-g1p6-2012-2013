@@ -18,8 +18,8 @@ public class Joueur {
 	/**
 	 * Pseudonyme du joueur
 	 */
-	// FIXME peut-il changer ? 
-	private String joueur;
+	// FIXME (FIXED) peut-il changer ? 
+	private final String joueur;
 	
 	/**
 	 * High score du joueur
@@ -36,8 +36,31 @@ public class Joueur {
 		this.joueur = NOM_JOUEUR_DEFAUT;
 		this.highScore = 0;
 	}
+
+	// FIXME (FIXED) ajouter des accesseurs sur les attributs
+	/**
+	 * @return Le high score du joueur courant
+	 */
+	public int getHighScore()
+	{
+		return this.highScore;
+	}
+
+	/**
+	 * @return Le nom du joueur courant
+	 */
+	public String getJoueur()
+	{
+		return this.joueur;
+	}
 	
-	// FIXME ajouter des accesseurs sur les attributs
+	// FIXME (FIXED) redéfinir toString
+	/**
+	 * Renvoie le nom du joueur ainsi que son high score sous la forme d'une chaîne de caractères
+	 */
+	public String toString()
+	{
+		return "[ Nom du joueur = " + this.joueur + "--> High score=" + this.highScore + "]";
+	}
 	
-	// FIXME redéfinir toString
 }

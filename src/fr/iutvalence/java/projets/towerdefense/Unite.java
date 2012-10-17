@@ -39,8 +39,8 @@ public class Unite
 	/**
 	 * Emplacement de l'unité, représenté par un objet "Coordonnees"
 	 */
-	// FIXME viibilité ?
-	Coordonnees pos;
+	// FIXME (FIXED) visibilité ?
+	private Coordonnees pos;
 	
 	// FIXME détailler
 	/**
@@ -54,7 +54,30 @@ public class Unite
 		this.pos = POSITION_UNITE;
 	}
 	
-	// FIXME accesseurs sur les attributs ?
+	// FIXME accesseurs sur les attributs ?	
+	/**
+	 * @return Entier représentant les points d'attaque de l'unité
+	 */
+	public int getPointsAttaque()
+	{
+		return this.pointsAttaque;
+	}
+
+	/**
+	 * @return Entier représentant les points de vie de l'unité
+	 */
+	public int getPointsVie()
+	{
+		return this.pointsVie;
+	}
+
+	/**
+	 * @return Coordonnées de l'unité
+	 */
+	public Coordonnees getPos()
+	{
+		return this.pos;
+	}
 	
 	// FIXME redéfinir toString
 }
