@@ -39,8 +39,7 @@ public class Partie
 	 * Nombre de towers présentes sur la matrice
 	 */	
 	private int nbTowers;
-
-	// FIXME (FIXED) initialisation des attributs dans le constructeur
+	
 	/**
 	 * Score du joueur
 	 */

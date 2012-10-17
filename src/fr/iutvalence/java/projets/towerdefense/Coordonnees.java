@@ -18,8 +18,8 @@ public class Coordonnees
 	/**
 	 * Permet de définir un objet "Coordonnees" composé de deux entiers donnée en paramètres
 	 *
-	 * @param x : entier (abscisse)
-	 * @param y : entier (ordonnée)
+	 * @param x abscisse
+	 * @param y ordonnée
 	 */
 	public Coordonnees(int x, int y)
 	{
@@ -29,9 +29,9 @@ public class Coordonnees
 	}
 
 	/**
-	 * Renvoi un entier correspondant à l'abscisse de l'objet
+	 * Renvoie l'abscisse
 	 *
-	 * @return entier (abscisse)
+	 * @return l'abscisse
 	 */
 	public int getX()
 	{
@@ -39,17 +39,19 @@ public class Coordonnees
 	}
 
 	/**
-	 * Renvoi un entier correspondant à ll'ordonée de l'objet
+	 * Renvoie l'ordonée
 	 *
-	 * @return entier (ordonnée)
+	 * @return l'ordonnée
 	 */
 	public int getY()
 	{
 		return this.y;
 	}
 
+	
+	// FIXME corriger le commentaire (à discuter)
 	/**
-	 * Renvoi une chaine de caractères correspondant à la postion de l'objet
+	 * Renvoie une chaine de caractères correspondant à la postion de l'objet
 	 * La chaine est composé de l'abscisse et de l'ordonée (des entiers)
 	 *
 	 * @return chaine (abscisse, ordonée)
@@ -58,4 +60,8 @@ public class Coordonnees
 	{
 		return "("+this.x + ","+this.y+")";
 	}
+	
+	// FIXME redéfinir equals et hashCode
+	
+	// FIXME écrire (dans une autre classe) une application de test basique
 }

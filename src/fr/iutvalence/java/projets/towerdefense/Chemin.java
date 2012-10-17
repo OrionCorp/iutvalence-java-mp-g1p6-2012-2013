@@ -9,23 +9,25 @@ public class Chemin
 {
 	/* CONSTANTES DE DEPLACEMENT ------------------------------ */
 
+	
+	// FIXME faire migrer ces constantes dans une énumération "Deplacement"
 	/**
-	 * Correspond a un déplacement vers le bas
+	 * Déplacement vers le bas
 	 */
 	public final static int BAS = 0;
 	
 	/**
-	 * Correspond a un déplacement vers le haut
+	 * Déplacement vers le haut
 	 */
 	public final static int HAUT = 1;
 	
 	/**
-	 * Correspond a un déplacement vers le gauche
+	 * Déplacement vers le gauche
 	 */
 	public final static int GAUCHE = 2;
 	
 	/**
-	 * Correspond a un déplacement vers le droite
+	 * Déplacement vers le droite
 	 */
 	public final static int DROITE = 3;
 
@@ -35,7 +37,7 @@ public class Chemin
 	private final Coordonnees coorDepart;
 	
 	/**
-	 * Tableau contenant les déplacments que les unités deveront effectuer afin de traverser la matrice
+	 * Tableau contenant les déplacements que les unités deveront effectuer afin de traverser la matrice
 	 */
 	private final int[] tabDeplacements;
 
@@ -65,4 +67,8 @@ public class Chemin
 		
 		return res;
 	}
+	
+	// FIXME redéfinir toString
+	
+	// FIXME écrire (dans une autre classe) une application de test basique
 }

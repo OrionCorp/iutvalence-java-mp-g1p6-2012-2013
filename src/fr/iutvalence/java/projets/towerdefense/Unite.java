@@ -1,5 +1,6 @@
 package fr.iutvalence.java.projets.towerdefense;
 
+// FIXME détailler un peu
 /**
  * Gère les unités
  */
@@ -38,8 +39,10 @@ public class Unite
 	/**
 	 * Emplacement de l'unité, représenté par un objet "Coordonnees"
 	 */
+	// FIXME viibilité ?
 	Coordonnees pos;
 	
+	// FIXME détailler
 	/**
 	 * Constructeur par défaut : Créer une unité de niveau 1
 	 */
@@ -50,4 +53,8 @@ public class Unite
 		this.pointsAttaque = PA_UNITE_DEFAULT;
 		this.pos = POSITION_UNITE;
 	}
+	
+	// FIXME accesseurs sur les attributs ?
+	
+	// FIXME redéfinir toString
 }

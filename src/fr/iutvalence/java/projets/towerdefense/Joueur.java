@@ -18,6 +18,7 @@ public class Joueur {
 	/**
 	 * Pseudonyme du joueur
 	 */
+	// FIXME peut-il changer ? 
 	private String joueur;
 	
 	/**
@@ -35,4 +36,8 @@ public class Joueur {
 		this.joueur = NOM_JOUEUR_DEFAUT;
 		this.highScore = 0;
 	}
+	
+	// FIXME ajouter des accesseurs sur les attributs
+	
+	// FIXME redéfinir toString
 }

@@ -6,6 +6,7 @@ import fr.iutvalence.java.projets.towerdefense.Coordonnees;
 import fr.iutvalence.java.projets.towerdefense.Matrice;
 
 
+//FIXME détailler (à discuter)
 /**
  * Permet de tester la carte de jeu
  *
@@ -13,6 +14,7 @@ import fr.iutvalence.java.projets.towerdefense.Matrice;
 public class TestMatrice
 {
 
+	// FIXME compléter le commentaire
 	/** Créer une matrice, la remplir et l'affiche
 	 * @param args
 	 */

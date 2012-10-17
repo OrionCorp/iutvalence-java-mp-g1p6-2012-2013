@@ -11,4 +11,10 @@ public class Tower
 	 */
 	public final static int PV_MAX_TOWER = 1000;
 	 
+	
+	// FIXME attributs ?
+	
+	// FIXME constructeurs ?
+	
+	// FIXME redéfinir toString
 }

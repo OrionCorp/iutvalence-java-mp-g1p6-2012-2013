@@ -23,7 +23,7 @@ public class Matrice
 	/* VARIABLES DE DECOR ------------------------------ */
 	
 	
-	// FIXME (à la fin) définir sous la forme d'une énumération
+	// FIXME définir sous la forme d'une énumération "Decor"
 	/**
 	 * Correspond au décor terre
 	 */
@@ -61,6 +61,8 @@ public class Matrice
 	 */
 	private final Chemin chemin;
 	
+	
+	// FIXME détailler le commentaire (contenu des cases)
 	/**
 	 * Tableau d'entiers à double dimensions : représente le décor matrice.
 	 */
@@ -84,8 +86,7 @@ public class Matrice
 		this.background = background;
 	}
 	
-	// FIXME (FIXED) remplacer par une redéfinition de toString() 
-	
+	// FIXME corriger le commentaire (rien n'est affiché)
 	/**
 	 * Affiche la representation graphique de la matrice
 	 * Parcours le matrice.background (un tableau à double dimensions) afin d'en afficher le contenu
@@ -103,4 +104,6 @@ public class Matrice
 		}	
 		return res;
 	}
+	
+	// FIXME ajouter des accesseurs sur les attributs
 }
