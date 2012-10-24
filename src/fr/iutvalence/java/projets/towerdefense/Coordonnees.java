@@ -9,7 +9,7 @@ public class Coordonnees
 	 * Abscisse
 	 */
 	private final int x;
-	
+
 	/**
 	 * Ordonnée
 	 */
@@ -17,9 +17,11 @@ public class Coordonnees
 
 	/**
 	 * Permet de définir un objet "Coordonnees" composé de deux entiers donnée en paramètres
-	 *
-	 * @param x abscisse
-	 * @param y ordonnée
+	 * 
+	 * @param x
+	 *            abscisse
+	 * @param y
+	 *            ordonnée
 	 */
 	public Coordonnees(int x, int y)
 	{
@@ -30,7 +32,7 @@ public class Coordonnees
 
 	/**
 	 * Renvoie l'abscisse
-	 *
+	 * 
 	 * @return l'abscisse
 	 */
 	public int getX()
@@ -40,7 +42,7 @@ public class Coordonnees
 
 	/**
 	 * Renvoie l'ordonée
-	 *
+	 * 
 	 * @return l'ordonnée
 	 */
 	public int getY()
@@ -48,21 +50,20 @@ public class Coordonnees
 		return this.y;
 	}
 
-	
 	// FIXME corriger le commentaire (à discuter)
 	/**
-	 * Renvoie une chaine de caractères correspondant à la postion de l'objet
-	 * La chaine est composé de l'abscisse et de l'ordonée (des entiers)
-	 *
+	 * Renvoie une chaine de caractères correspondant à la postion de l'objet La chaine est composé de l'abscisse et de
+	 * l'ordonée (des entiers)
+	 * 
 	 * @return chaine (abscisse, ordonée)
 	 */
 	public String toString()
 	{
-		return "("+this.x + ","+this.y+")";
+		return "(" + this.x + "," + this.y + ")";
 	}
-	
+
 	// FIXME (FIXED) redéfinir equals et hashCode
-	
+
 	/**
 	 * @see java.lang.Object#hashCode()
 	 */
@@ -77,6 +78,7 @@ public class Coordonnees
 
 	/**
 	 * Permet de savoir si deux coordonnées sont égales ou non
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	public boolean equals(Object obj)
@@ -94,6 +96,6 @@ public class Coordonnees
 			return false;
 		return true;
 	}
-	
+
 	// FIXME écrire (dans une autre classe) une application de test basique
 }

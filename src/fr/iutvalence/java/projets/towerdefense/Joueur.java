@@ -4,26 +4,26 @@ package fr.iutvalence.java.projets.towerdefense;
  * Gère les joueurs
  */
 
-public class Joueur {
-	
+public class Joueur
+{
+
 	/* CONSTANTES --------------------------------------- */
-	
+
 	/**
 	 * Nom par défaut attribué au joueur
 	 */
 	private final static String NOM_JOUEUR_DEFAUT = "Gordon Freeman";
-	
+
 	/* VARIABLES DE JOUEUR ------------------------------ */
-	
+
 	/**
 	 * Pseudonyme du joueur
 	 */
-	// FIXME (FIXED) peut-il changer ? 
+	// FIXME (FIXED) peut-il changer ?
 	private final String joueur;
-	
+
 	/**
-	 * High score du joueur
-	 * //TODO (à la fin) Penser à gérer le high score à l'aide d'une base de données
+	 * High score du joueur //TODO (à la fin) Penser à gérer le high score à l'aide d'une base de données
 	 */
 	private int highScore;
 
@@ -53,7 +53,7 @@ public class Joueur {
 	{
 		return this.joueur;
 	}
-	
+
 	// FIXME (FIXED) redéfinir toString
 	/**
 	 * Renvoie le nom du joueur ainsi que son high score sous la forme d'une chaîne de caractères
@@ -62,5 +62,5 @@ public class Joueur {
 	{
 		return "[ Nom du joueur = " + this.joueur + "--> High score=" + this.highScore + "]";
 	}
-	
+
 }

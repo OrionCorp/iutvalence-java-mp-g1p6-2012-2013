@@ -12,5 +12,5 @@ public class CoordonneesMatriceException extends Exception
 	{
 		System.out.println("Les coordonnées fournies sont en dehors de la carte !");
 	}
-	
+
 }
