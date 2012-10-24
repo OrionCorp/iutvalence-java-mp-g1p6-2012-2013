@@ -1,6 +1,6 @@
 package fr.iutvalence.java.projets.towerdefense;
 
-// FIXME détailler un peu le commentaire
+// FIXME (FIXED > Voir le wiki du projet) détailler un peu le commentaire
 /**
  * Permet la definition d'une partie.
  */

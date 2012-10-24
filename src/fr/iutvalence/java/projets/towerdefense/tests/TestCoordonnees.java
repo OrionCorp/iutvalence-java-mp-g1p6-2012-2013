@@ -2,8 +2,10 @@ package fr.iutvalence.java.projets.towerdefense.tests;
 
 import fr.iutvalence.java.projets.towerdefense.Coordonnees;
 
-// FIXME détailler (à discuter)
+// FIXME (FIXED) détailler (à discuter)
 /**
+ * Le test correspond à créer un objet Coordonnées, et à l'afficher
+ * 
  * Permet de tester les coordonnées
  */
 public class TestCoordonnees

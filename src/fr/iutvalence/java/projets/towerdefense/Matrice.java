@@ -19,28 +19,8 @@ public class Matrice
 	 */
 	public final static int HAUTEUR_MAX = 20;
 
-	/* VARIABLES DE DECOR ------------------------------ */
-
-	// FIXME définir sous la forme d'une énumération "Decor"
-	/**
-	 * Correspond au décor terre
-	 */
-	public final static int TERRE = 11;
-
-	/**
-	 * Correspond au décor herbe
-	 */
-	public final static int HERBE = 12;
-
-	/**
-	 * Correspond au décor route
-	 */
-	public final static int ROUTE = 13;
-
-	/**
-	 * Correspond au décor mur
-	 */
-	public final static int MUR = 14;
+	// FIXME (FIXED > Voir classe Decor) définir sous la forme d'une énumération "Decor"
+	
 
 	/* VARIABLES DE MATRICE ------------------------------ */
 
@@ -63,8 +43,7 @@ public class Matrice
 	 * Tableau d'entiers à double dimensions : représente le décor matrice. Contient des des entiers qui représentent le
 	 * décor
 	 */
-	// FIXME (une fois l'énumération définie) utiliser le type énuméré
-	private int[][] background;
+	private Decor[][] background;
 
 	/**
 	 * Genère une matrice d'une taille, d'un chemin et d'un background donnés
@@ -78,7 +57,7 @@ public class Matrice
 	 * @param background
 	 *            le décor de la matrice de jeu
 	 */
-	public Matrice(int hauteur, int largeur, Chemin chemin, int[][] background)
+	public Matrice(int hauteur, int largeur, Chemin chemin, Decor[][] background)
 	{
 		super();
 		this.largeur = largeur;
@@ -86,7 +65,6 @@ public class Matrice
 		this.chemin = chemin;
 		this.background = background;
 	}
-
 
 	/**
 	 * Renvoie une chaîne qui contient la représentation du background de la matrice en ascii-art
@@ -101,10 +79,18 @@ public class Matrice
 		{					// Parcours le premier tableau
 			for (int j = 0; j < this.largeur; j++)
 			{				// Parcours le second tableau
-				res = res + this.background[i][j];
+				
+				switch (this.background[i][j])
+				{
+					case MUR : res = res +"M"; break;
+					case HERBE : res = res +"H"; break;
+					case ROUTE : res = res +"R"; break;
+					case TERRE : res = res +"T"; break;
+				}
+				
 				res = res + " ";
 			}
-			res = res + "\n";					 				// Permet de revenir à la ligne au moment de passer à la ligne suivante du tableau
+			res = res + "\n";	// Permet de revenir à la ligne au moment de passer à la ligne suivante du tableau
 		}
 		return res;
 	}
@@ -115,9 +101,9 @@ public class Matrice
 	 * @param c
 	 *            Un objet de type Coordonnées
 	 * @return Un entier représentant l'élément (décor, chemin) aux coordonnées données
+	 * @throws CoordonneesMatriceException Gère les exceptions au niveau des coordonnées des points
 	 */
-	// FIXME (une fois l'énumération définie) utiliser le type énuméré
-	public int getBackgroundAt(Coordonnees c) throws CoordonneesMatriceException
+	public Decor getBackgroundAt(Coordonnees c) throws CoordonneesMatriceException
 	{
 		if (c.getX() > getLargeur() || c.getX() < 0 || c.getY() > getHauteur() || c.getY() < 0)
 		{
@@ -126,6 +112,22 @@ public class Matrice
 		return this.background[c.getX()][c.getY()];
 	}
 
+	/**
+	 * Permet de changer le background à des coordonnées données.
+	 * @param c coordonnées du point dont le background sera changé
+	 * @param background nouveau décor 
+	 * @throws CoordonneesMatriceException Gère les exceptions au niveau des coordonnées des points
+	 */
+	public void setBackgroundAt(Coordonnees c, Decor background) throws CoordonneesMatriceException
+	{
+		// FIXME (FIXED) à compléter
+		if (c.getX() > getLargeur() || c.getX() < 0 || c.getY() > getHauteur() || c.getY() < 0)
+		{
+			throw new CoordonneesMatriceException();
+		}
+		this.background[c.getX()][c.getY()] = background;
+	}
+	
 	/**
 	 * Permet d'obtenir la largeur de la carte
 	 * 

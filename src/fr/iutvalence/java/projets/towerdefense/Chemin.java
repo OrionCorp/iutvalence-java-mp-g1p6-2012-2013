@@ -2,6 +2,8 @@
 
 package fr.iutvalence.java.projets.towerdefense;
 
+import java.util.Arrays;
+
 /**
  * Permet de gérer le chemin de déplacement dans la carte
  */
@@ -9,26 +11,7 @@ public class Chemin
 {
 	/* CONSTANTES DE DEPLACEMENT ------------------------------ */
 
-	// FIXME faire migrer ces constantes dans une énumération "Deplacement"
-	/**
-	 * Déplacement vers le bas
-	 */
-	public final static int BAS = 0;
-
-	/**
-	 * Déplacement vers le haut
-	 */
-	public final static int HAUT = 1;
-
-	/**
-	 * Déplacement vers le gauche
-	 */
-	public final static int GAUCHE = 2;
-
-	/**
-	 * Déplacement vers le droite
-	 */
-	public final static int DROITE = 3;
+	// FIXME (FIXED) faire migrer ces constantes dans une énumération "Deplacement"
 
 	/**
 	 * Coordonnées de départ du chemin
@@ -38,7 +21,7 @@ public class Chemin
 	/**
 	 * Tableau contenant les déplacements que les unités deveront effectuer afin de traverser la matrice
 	 */
-	private final int[] tabDeplacements;
+	private final Deplacement[] tabDeplacements;
 
 	/**
 	 * Chemin : contient les coordonées de spawn des unités ainsi que les déplacements qu'elles deveront effectuer afin
@@ -49,7 +32,7 @@ public class Chemin
 	 * @param tabDeplacements
 	 *            : permetr de définir les déplacements à effectuer (int[])
 	 */
-	public Chemin(Coordonnees coorDepart, int[] tabDeplacements)
+	public Chemin(Coordonnees coorDepart, Deplacement[] tabDeplacements)
 	{
 		super();
 		this.coorDepart = coorDepart;
@@ -70,7 +53,14 @@ public class Chemin
 		return res;
 	}
 
-	// FIXME redéfinir toString
+	// FIXME (FIXED) redéfinir toString
+	/**
+	 * Renvoie une chaîne contenant les coordonnées du point de départ et le tableau des déplacements
+	 */
+	public String toString()
+	{
+		return "Coodonnées de départ = " + coorDepart + ", Tableau des déplacements = " + Arrays.toString(tabDeplacements);
+	}
 
-	// FIXME écrire (dans une autre classe) une application de test basique
+	// FIXME (FIXED) écrire (dans une autre classe) une application de test basique
 }

@@ -1,8 +1,9 @@
 package fr.iutvalence.java.projets.towerdefense;
 
-// FIXME détailler un peu
+// FIXME (FIXED) détailler un peu
 /**
- * Gère les unités
+ * Permet de gérer les untiés.
+ * Une unité est caractérisée par des points de vie, d'attaque, et une position sur la carte 
  */
 public class Unite
 {
@@ -41,9 +42,10 @@ public class Unite
 	 */
 	private Coordonnees pos;
 
-	// FIXME détailler
+	// FIXME (FIXED) détailler
 	/**
-	 * Constructeur par défaut : Créer une unité de niveau 1
+	 * Constructeur par défaut : Créer une unité de niveau 1,
+	 * en utilisant les valeurs par défaut pour les attributs
 	 */
 	public Unite()
 	{
@@ -54,26 +56,29 @@ public class Unite
 		this.pos = POSITION_UNITE;
 	}
 
-	// FIXME compléter le commentaire
+	// FIXME (FIXED) compléter le commentaire
 	/**
-	 * @return Entier représentant les points d'attaque de l'unité
+	 * Fonction permettant d'obtenir les points d'attaque de l'unité
+	 * @return les points d'attaque de l'unité
 	 */
 	public int getPointsAttaque()
 	{
 		return this.pointsAttaque;
 	}
 
-	// FIXME compléter le commentaire
+	// FIXME (FIXED) compléter le commentaire
 	/**
-	 * @return Entier représentant les points de vie de l'unité
+	 * Fonction permettant d'obtenir les points de vie de l'unité
+	 * @return les points de vie de l'unité
 	 */
 	public int getPointsVie()
 	{
 		return this.pointsVie;
 	}
 
-	// FIXME compléter le commentaire
+	// FIXME (FIXED) compléter le commentaire
 	/**
+	 * Fonction permettant d'obtenir les coordonnées de l'unité
 	 * @return Coordonnées de l'unité
 	 */
 	public Coordonnees getPos()
@@ -81,5 +86,10 @@ public class Unite
 		return this.pos;
 	}
 
-	// FIXME redéfinir toString
+	// FIXME (FIXED) redéfinir toString
+	public String toString()
+	{
+		return "Unité -- Points d'Attaque = " + this.pointsAttaque + ", Points de Vie=" + this.pointsVie + ", Position = " + this.pos + "]";
+	}
+	
 }
