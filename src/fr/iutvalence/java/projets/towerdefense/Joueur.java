@@ -16,10 +16,10 @@ public class Joueur
 
 	/* VARIABLES DE JOUEUR ------------------------------ */
 
+	// FIXME renommer l'attribut et le getter
 	/**
 	 * Pseudonyme du joueur
 	 */
-	// FIXME (FIXED) peut-il changer ?
 	private final String joueur;
 
 	/**
@@ -37,7 +37,6 @@ public class Joueur
 		this.highScore = 0;
 	}
 
-	// FIXME (FIXED) ajouter des accesseurs sur les attributs
 	/**
 	 * @return Le high score du joueur courant
 	 */
@@ -54,7 +53,6 @@ public class Joueur
 		return this.joueur;
 	}
 
-	// FIXME (FIXED) redéfinir toString
 	/**
 	 * Renvoie le nom du joueur ainsi que son high score sous la forme d'une chaîne de caractères
 	 */

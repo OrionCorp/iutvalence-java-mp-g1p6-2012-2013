@@ -50,19 +50,16 @@ public class Coordonnees
 		return this.y;
 	}
 
-	// FIXME corriger le commentaire (à discuter)
 	/**
-	 * Renvoie une chaine de caractères correspondant à la postion de l'objet La chaine est composé de l'abscisse et de
-	 * l'ordonée (des entiers)
+	 * Renvoie une chaine de caractères correspondant à la position de l'objet La chaine est composé de l'abscisse et de
+	 * l'ordonnée (des entiers)
 	 * 
-	 * @return chaine (abscisse, ordonée)
+	 * @return (<i>abscisse</i>, <i>ordonnée</i>)
 	 */
 	public String toString()
 	{
 		return "(" + this.x + "," + this.y + ")";
 	}
-
-	// FIXME (FIXED) redéfinir equals et hashCode
 
 	/**
 	 * @see java.lang.Object#hashCode()
@@ -76,6 +73,7 @@ public class Coordonnees
 		return result;
 	}
 
+	// FIXME dire à quelle conditions 2 coord sont égales
 	/**
 	 * Permet de savoir si deux coordonnées sont égales ou non
 	 * 
@@ -96,6 +94,4 @@ public class Coordonnees
 			return false;
 		return true;
 	}
-
-	// FIXME écrire (dans une autre classe) une application de test basique
 }

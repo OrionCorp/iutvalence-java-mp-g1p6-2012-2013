@@ -8,11 +8,10 @@ import fr.iutvalence.java.projets.towerdefense.Coordonnees;
  */
 public class TestCoordonnees
 {
-	// FIXME compléter le commentaire
 	/**
 	 * Création d'un objet Coordonnées que l'on va afficher à des fins de test
 	 * 
-	 * @param args
+	 * @param args aucun
 	 */
 	public static void main(String[] args)
 	{

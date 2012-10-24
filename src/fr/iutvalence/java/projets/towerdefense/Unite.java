@@ -39,7 +39,6 @@ public class Unite
 	/**
 	 * Emplacement de l'unité, représenté par un objet "Coordonnees"
 	 */
-	// FIXME (FIXED) visibilité ?
 	private Coordonnees pos;
 
 	// FIXME détailler
@@ -55,7 +54,7 @@ public class Unite
 		this.pos = POSITION_UNITE;
 	}
 
-	// FIXME accesseurs sur les attributs ?
+	// FIXME compléter le commentaire
 	/**
 	 * @return Entier représentant les points d'attaque de l'unité
 	 */
@@ -64,6 +63,7 @@ public class Unite
 		return this.pointsAttaque;
 	}
 
+	// FIXME compléter le commentaire
 	/**
 	 * @return Entier représentant les points de vie de l'unité
 	 */
@@ -72,6 +72,7 @@ public class Unite
 		return this.pointsVie;
 	}
 
+	// FIXME compléter le commentaire
 	/**
 	 * @return Coordonnées de l'unité
 	 */

@@ -59,14 +59,13 @@ public class Matrice
 	 */
 	private final Chemin chemin;
 
-	// FIXME (FIXED) détailler le commentaire (contenu des cases)
 	/**
 	 * Tableau d'entiers à double dimensions : représente le décor matrice. Contient des des entiers qui représentent le
 	 * décor
 	 */
+	// FIXME (une fois l'énumération définie) utiliser le type énuméré
 	private int[][] background;
 
-	// FIXME (FIXED) corriger
 	/**
 	 * Genère une matrice d'une taille, d'un chemin et d'un background donnés
 	 * 
@@ -88,10 +87,9 @@ public class Matrice
 		this.background = background;
 	}
 
-	// FIXME (FIXED) corriger le commentaire (rien n'est affiché)
 
 	/**
-	 * Renvoie une chaîne qui contient la représentation du background de la matrice
+	 * Renvoie une chaîne qui contient la représentation du background de la matrice en ascii-art
 	 * 
 	 * @see java.lang.Object#toString()
 	 */
@@ -118,6 +116,7 @@ public class Matrice
 	 *            Un objet de type Coordonnées
 	 * @return Un entier représentant l'élément (décor, chemin) aux coordonnées données
 	 */
+	// FIXME (une fois l'énumération définie) utiliser le type énuméré
 	public int getBackgroundAt(Coordonnees c) throws CoordonneesMatriceException
 	{
 		if (c.getX() > getLargeur() || c.getX() < 0 || c.getY() > getHauteur() || c.getY() < 0)
@@ -157,6 +156,5 @@ public class Matrice
 		return this.chemin;
 	}
 
-	// FIXME (FIXED) ajouter des accesseurs sur les attributs
 
 }
