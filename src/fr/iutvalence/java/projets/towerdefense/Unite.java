@@ -103,7 +103,7 @@ public class Unite
 	// FIXME (FIXED) redéfinir toString
 	public String toString()
 	{
-		return "Unité -- Points d'Attaque = " + this.pointsAttaque + ", Points de Vie = " + this.pointsVie + ", Position = " + this.pos + "]";
+		return "Unité -- Points d'Attaque = " + this.pointsAttaque + ", Points de Vie = " + this.pointsVie + ", Position = " + this.pos;
 	}
 	
 }

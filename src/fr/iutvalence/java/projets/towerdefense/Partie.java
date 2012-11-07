@@ -57,7 +57,7 @@ public class Partie
 		this.score = 0;
 	}
 
-	// FIXME autres attributs ?
+	// FIXME (Half FIXED) autres attributs ?
 
 	// FIXME (Half FIXED) constructeurs, méthodes ?
 }

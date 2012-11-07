@@ -5,15 +5,43 @@ package fr.iutvalence.java.projets.towerdefense;
  */
 
 public class Tower
-{
+{	
 	/**
-	 * Nombre de PV maximums d'une tower
+	 * Position de la tower
 	 */
-	public final static int PV_MAX_TOWER = 1000;
+	private Coordonnees pos;
+	
+	/**
+	 * Points d'attaque de la tower
+	 */
+	private final int pointsAttaque;
+	
+	/**
+	 * Portée d'attaque de la tower
+	 */
+	private final int porteeAttaque;
+	
+	/**
+	 * Créer une tower avec des caractéristiques données
+	 * @param pointsAttaque
+	 * @param porteeAttaque
+	 * @param pos
+	 */
+	public Tower(int pointsAttaque, int porteeAttaque, Coordonnees pos)
+	{
+		this.pointsAttaque = pointsAttaque;
+		this.porteeAttaque = porteeAttaque;
+		this.pos = pos;
+	}
 
-	// FIXME attributs ?
+	public String toString()
+	{
+		return "Tower -- Position = " + this.pos + ", points d'attaque = " + this.pointsAttaque + ", Portée de l'attaque = " + this.porteeAttaque;
+	}
 
-	// FIXME constructeurs ?
+	// FIXME (FIXED) attributs ?
 
-	// FIXME redéfinir toString
+	// FIXME (FIXED) constructeurs ?
+
+	// FIXME (FIXED) redéfinir toString
 }
