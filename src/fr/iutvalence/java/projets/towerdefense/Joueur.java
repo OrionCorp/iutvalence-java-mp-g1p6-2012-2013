@@ -37,6 +37,7 @@ public class Joueur
 	}
 
 	/**
+	 * Obtenir le hight score du joueur	 * 
 	 * @return Le high score du joueur courant
 	 */
 	public int getHighScore()

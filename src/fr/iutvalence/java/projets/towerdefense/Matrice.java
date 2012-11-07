@@ -47,13 +47,13 @@ public class Matrice
 	 * Genère une matrice d'une taille, d'un chemin et d'un background donnés
 	 * 
 	 * @param hauteur
-	 *            la hauteur de la matrice
+	 *            La hauteur de la matrice
 	 * @param largeur
-	 *            la largeur de la matrice
+	 *            La largeur de la matrice
 	 * @param chemin
-	 *            le chemin que les unités deveront parcouriri afin de traverser la matrice
+	 *            Le chemin que les unités deveront parcouriri afin de traverser la matrice
 	 * @param background
-	 *            le décor de la matrice de jeu
+	 *            Le décor de la matrice de jeu
 	 */
 	public Matrice(int hauteur, int largeur, Chemin chemin, Decor[][] background)
 	{
@@ -112,8 +112,8 @@ public class Matrice
 
 	/**
 	 * Permet de changer le background à des coordonnées données.
-	 * @param c coordonnées du point dont le background sera changé
-	 * @param background nouveau décor 
+	 * @param c Coordonnées du point dont le background sera changé
+	 * @param background Nouveau décor 
 	 * @throws CoordonneesMatriceException Gère les exceptions au niveau des coordonnées des points
 	 */
 	public void setBackgroundAt(Coordonnees c, Decor background) throws CoordonneesMatriceException

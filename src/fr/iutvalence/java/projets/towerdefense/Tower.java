@@ -36,6 +36,9 @@ public class Tower
 		this.pos = pos;
 	}
 
+	/*
+	 * @see java.lang.Object#toString()
+	 */
 	public String toString()
 	{
 		return "Tower -- Position = " + this.pos + ", points d'attaque = " + this.pointsAttaque + ", Portée de l'attaque = " + this.porteeAttaque;

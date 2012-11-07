@@ -37,7 +37,7 @@ public class Chemin
 	/**
 	 * Renvoie les coordonnées successives que les unités deveront suivre afin de traverser la matrice
 	 * 
-	 * @return un tableau contenant toutes les coordonnées
+	 * @return Un tableau contenant toutes les coordonnées
 	 */
 	public Coordonnees[] coordonneesChemin()
 	{

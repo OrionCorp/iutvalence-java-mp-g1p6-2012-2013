@@ -18,10 +18,8 @@ public class Coordonnees
 	/**
 	 * Permet de définir un objet "Coordonnees" composé de deux entiers donnée en paramètres
 	 * 
-	 * @param x
-	 *            abscisse
-	 * @param y
-	 *            ordonnée
+	 * @param x Abscisse de la coordonnée
+	 * @param y Ordonnée de la coordonnée
 	 */
 	public Coordonnees(int x, int y)
 	{
@@ -33,7 +31,7 @@ public class Coordonnees
 	/**
 	 * Renvoie l'abscisse
 	 * 
-	 * @return l'abscisse
+	 * @return L'abscisse
 	 */
 	public int getX()
 	{
@@ -43,7 +41,7 @@ public class Coordonnees
 	/**
 	 * Renvoie l'ordonée
 	 * 
-	 * @return l'ordonnée
+	 * @return L'ordonnée
 	 */
 	public int getY()
 	{
