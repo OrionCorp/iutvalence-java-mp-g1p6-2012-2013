@@ -45,17 +45,22 @@ public class Partie
 	 * Score du joueur
 	 */
 	private int score;
+	
+	private Matrice matrice;
 
+	
+	//FIXME PERSO Corriger le commentaire
 	/**
 	 * Gère une partie dont les nombres de tours, tower, score et unités sont initialisés à 0
 	 */
-	public Partie()
+	public Partie(Matrice matrice)
 	{
 		super();
 		this.nbTours = 0;
 		this.nbTowers = 0;
 		this.nbUnites = 0;
 		this.score = 0;
+		this.matrice = matrice;
 	}
 
 	/*
@@ -66,6 +71,14 @@ public class Partie
 		return "Partie - nbTours = " + this.nbTours + ", nbUnites = " + this.nbUnites + ", nbTowers = " + this.nbTowers + ", score = " + this.score;
 	}
 
+	/**
+	 * Démarrer la partie
+	 */
+	public void demarrer()
+	{
+		System.out.print(this.matrice);
+	}
+	
 	// FIXME autres attributs ?
 
 	// FIXME méthodes ?
