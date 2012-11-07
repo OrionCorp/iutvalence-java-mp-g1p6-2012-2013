@@ -12,7 +12,7 @@ public class Joueur
 	/**
 	 * Nom par défaut attribué au joueur
 	 */
-	private final static String NOM_JOUEUR_DEFAUT = "Gordon Freeman";
+	private final static String NOM_JOUEUR_DEFAUT = "Joueur";
 
 	/* VARIABLES DE JOUEUR ------------------------------ */
 
@@ -20,7 +20,7 @@ public class Joueur
 	/**
 	 * Pseudonyme du joueur
 	 */
-	private final String joueur;
+	private final String joueur; 
 
 	/**
 	 * High score du joueur //TODO (à la fin) Penser à gérer le high score à l'aide d'une base de données
@@ -60,5 +60,4 @@ public class Joueur
 	{
 		return "[ Nom du joueur = " + this.joueur + "--> High score=" + this.highScore + "]";
 	}
-
 }

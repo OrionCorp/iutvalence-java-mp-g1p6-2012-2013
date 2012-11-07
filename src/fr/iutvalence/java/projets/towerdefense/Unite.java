@@ -55,6 +55,20 @@ public class Unite
 		this.pointsAttaque = PA_UNITE_DEFAULT;
 		this.pos = POSITION_UNITE;
 	}
+	
+	/**
+	 * Constructeur permettant de créer une unité dont on défini les différentes caractéristiques
+	 * @param pv
+	 * @param pa
+	 * @param position
+	 */
+	public Unite(int pv, int pa, Coordonnees position)
+	{
+		super();
+		this.pointsVie = pv;
+		this.pointsAttaque = pa;
+		this.pos = position;
+	}
 
 	// FIXME (FIXED) compléter le commentaire
 	/**
@@ -89,7 +103,7 @@ public class Unite
 	// FIXME (FIXED) redéfinir toString
 	public String toString()
 	{
-		return "Unité -- Points d'Attaque = " + this.pointsAttaque + ", Points de Vie=" + this.pointsVie + ", Position = " + this.pos + "]";
+		return "Unité -- Points d'Attaque = " + this.pointsAttaque + ", Points de Vie = " + this.pointsVie + ", Position = " + this.pos + "]";
 	}
 	
 }
