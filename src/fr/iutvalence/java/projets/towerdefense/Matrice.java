@@ -18,8 +18,6 @@ public class Matrice
 	 * Hauteur maximale de la matrice de jeu
 	 */
 	public final static int HAUTEUR_MAX = 20;
-
-	// FIXME (FIXED > Voir classe Decor) définir sous la forme d'une énumération "Decor"
 	
 
 	/* VARIABLES DE MATRICE ------------------------------ */
@@ -120,7 +118,6 @@ public class Matrice
 	 */
 	public void setBackgroundAt(Coordonnees c, Decor background) throws CoordonneesMatriceException
 	{
-		// FIXME (FIXED) à compléter
 		if (c.getX() > getLargeur() || c.getX() < 0 || c.getY() > getHauteur() || c.getY() < 0)
 		{
 			throw new CoordonneesMatriceException();

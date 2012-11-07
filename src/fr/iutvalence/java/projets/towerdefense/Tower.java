@@ -21,6 +21,8 @@ public class Tower
 	 */
 	private final int porteeAttaque;
 	
+	
+	// FIXME compléter le commentaire
 	/**
 	 * Créer une tower avec des caractéristiques données
 	 * @param pointsAttaque
@@ -38,10 +40,4 @@ public class Tower
 	{
 		return "Tower -- Position = " + this.pos + ", points d'attaque = " + this.pointsAttaque + ", Portée de l'attaque = " + this.porteeAttaque;
 	}
-
-	// FIXME (FIXED) attributs ?
-
-	// FIXME (FIXED) constructeurs ?
-
-	// FIXME (FIXED) redéfinir toString
 }

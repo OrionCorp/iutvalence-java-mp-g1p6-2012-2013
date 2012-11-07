@@ -1,6 +1,5 @@
 package fr.iutvalence.java.projets.towerdefense;
 
-// FIXME (FIXED) détailler un peu
 /**
  * Permet de gérer les untiés.
  * Une unité est caractérisée par des points de vie, d'attaque, et une position sur la carte 
@@ -42,10 +41,8 @@ public class Unite
 	 */
 	private Coordonnees pos;
 
-	// FIXME (FIXED) détailler
 	/**
-	 * Constructeur par défaut : Créer une unité de niveau 1,
-	 * en utilisant les valeurs par défaut pour les attributs
+	 * Créer une unité de niveau 1,en utilisant les valeurs par défaut 
 	 */
 	public Unite()
 	{
@@ -56,8 +53,10 @@ public class Unite
 		this.pos = POSITION_UNITE;
 	}
 	
+	
+	//FIXME compléter le commentaire
 	/**
-	 * Constructeur permettant de créer une unité dont on défini les différentes caractéristiques
+	 * Créer une unité dont on défini les différentes caractéristiques
 	 * @param pv
 	 * @param pa
 	 * @param position
@@ -70,9 +69,8 @@ public class Unite
 		this.pos = position;
 	}
 
-	// FIXME (FIXED) compléter le commentaire
 	/**
-	 * Fonction permettant d'obtenir les points d'attaque de l'unité
+	 * Obtenir les points d'attaque de l'unité
 	 * @return les points d'attaque de l'unité
 	 */
 	public int getPointsAttaque()
@@ -80,9 +78,8 @@ public class Unite
 		return this.pointsAttaque;
 	}
 
-	// FIXME (FIXED) compléter le commentaire
 	/**
-	 * Fonction permettant d'obtenir les points de vie de l'unité
+	 * Obtenir les points de vie de l'unité
 	 * @return les points de vie de l'unité
 	 */
 	public int getPointsVie()
@@ -90,17 +87,18 @@ public class Unite
 		return this.pointsVie;
 	}
 
-	// FIXME (FIXED) compléter le commentaire
 	/**
-	 * Fonction permettant d'obtenir les coordonnées de l'unité
-	 * @return Coordonnées de l'unité
+	 * Obtenir les coordonnées de l'unité
+	 * @return les coordonnées de l'unité
 	 */
 	public Coordonnees getPos()
 	{
 		return this.pos;
 	}
 
-	// FIXME (FIXED) redéfinir toString
+	/**
+	 * @see java.lang.Object#toString()
+	 */
 	public String toString()
 	{
 		return "Unité -- Points d'Attaque = " + this.pointsAttaque + ", Points de Vie = " + this.pointsVie + ", Position = " + this.pos;

@@ -1,6 +1,6 @@
 package fr.iutvalence.java.projets.towerdefense;
 
-// FIXME (FIXED > Voir le wiki du projet) détailler un peu le commentaire
+// FIXME mettre un lien commenté sur le wiki
 /**
  * Permet la definition d'une partie.
  */
@@ -57,7 +57,7 @@ public class Partie
 		this.score = 0;
 	}
 
-	// FIXME (Half FIXED) autres attributs ?
+	// FIXME  autres attributs ?
 
-	// FIXME (Half FIXED) constructeurs, méthodes ?
+	// FIXME méthodes ?
 }

@@ -1,5 +1,7 @@
 package fr.iutvalence.java.projets.towerdefense;
 
+
+// FIXME commentaire
 public enum Deplacement
 {
 	/**

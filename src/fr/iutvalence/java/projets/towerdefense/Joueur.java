@@ -16,11 +16,10 @@ public class Joueur
 
 	/* VARIABLES DE JOUEUR ------------------------------ */
 
-	// FIXME renommer l'attribut et le getter
 	/**
 	 * Pseudonyme du joueur
 	 */
-	private final String joueur; 
+	private final String nomJoueur; 
 
 	/**
 	 * High score du joueur //TODO (à la fin) Penser à gérer le high score à l'aide d'une base de données
@@ -33,7 +32,7 @@ public class Joueur
 	public Joueur()
 	{
 		super();
-		this.joueur = NOM_JOUEUR_DEFAUT;
+		this.nomJoueur = NOM_JOUEUR_DEFAUT;
 		this.highScore = 0;
 	}
 
@@ -46,11 +45,12 @@ public class Joueur
 	}
 
 	/**
+	 * Obtenir le nom du joueur
 	 * @return Le nom du joueur courant
 	 */
-	public String getJoueur()
+	public String getNomJoueur()
 	{
-		return this.joueur;
+		return this.nomJoueur;
 	}
 
 	/**
@@ -58,6 +58,6 @@ public class Joueur
 	 */
 	public String toString()
 	{
-		return "[ Nom du joueur = " + this.joueur + "--> High score=" + this.highScore + "]";
+		return "[ Nom du joueur = " + this.nomJoueur + "--> High score=" + this.highScore + "]";
 	}
 }

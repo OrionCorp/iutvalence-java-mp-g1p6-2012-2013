@@ -1,4 +1,4 @@
-// FIXME (général) naviguer dans la doc et corriger si besoin
+
 
 package fr.iutvalence.java.projets.towerdefense;
 
@@ -10,8 +10,6 @@ import java.util.Arrays;
 public class Chemin
 {
 	/* CONSTANTES DE DEPLACEMENT ------------------------------ */
-
-	// FIXME (FIXED) faire migrer ces constantes dans une énumération "Deplacement"
 
 	/**
 	 * Coordonnées de départ du chemin
@@ -53,14 +51,13 @@ public class Chemin
 		return res;
 	}
 
-	// FIXME (FIXED) redéfinir toString
 	/**
 	 * Renvoie une chaîne contenant les coordonnées du point de départ et le tableau des déplacements
+	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
 	{
-		return "Coodonnées de départ = " + coorDepart + ", Tableau des déplacements = " + Arrays.toString(tabDeplacements);
+		return "Coodonnées de départ = " + this.coorDepart + ", Tableau des déplacements = " + Arrays.toString(this.tabDeplacements);
 	}
 
-	// FIXME (FIXED) écrire (dans une autre classe) une application de test basique
 }

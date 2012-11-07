@@ -12,7 +12,6 @@ import fr.iutvalence.java.projets.towerdefense.Deplacement;
  */
 public class TestMatrice
 {
-	// FIXME (FIXED) utiliser du HTML dans le commentaire, pour formatter le tableau
 	/**
 	 * Création d'une matrice avec un décor et un chemin, puis affichage de celle-ci afin de vérifier que tout est
 	 * fonctionnel L'affichage final devra être proche de celui-ci :
@@ -30,8 +29,6 @@ public class TestMatrice
 	 * On teste aussi la méthode getBackgroundAt
 	 * @param args paramètre par défaut de main
 	 */
-
-	// FIXME (FIXED) un main ne peut pas soulever d'exception
 	public static void main(String[] args)
 	{
 		Coordonnees pointDepart = new Coordonnees(4, 0);

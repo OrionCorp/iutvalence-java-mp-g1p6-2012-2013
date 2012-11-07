@@ -73,11 +73,11 @@ public class Coordonnees
 		return result;
 	}
 
-	// FIXME (FIXED) dire à quelle conditions 2 coord sont égales
+	
 	/**
-	 * Permet de savoir si deux coordonnées sont égales ou non
+	 *
 	 * On considère que deux coordonnées sont égales si les abscisses et les ordonnées de ces
-	 * coordonnées sont elles-mêmes
+	 * coordonnées sont les mêmes
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	public boolean equals(Object obj)
