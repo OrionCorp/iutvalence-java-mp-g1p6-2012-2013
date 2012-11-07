@@ -1,8 +1,9 @@
 package fr.iutvalence.java.projets.towerdefense;
 
-// FIXME mettre un lien commenté sur le wiki
+// FIXME (FIXED) mettre un lien commenté sur le wiki
 /**
  * Permet la definition d'une partie.
+ * Pour plus de détails, se référer au <a href="https://github.com/sebastienjean/iutvalence-java-mp-g1p6-2012-2013/wiki">wiki</a>
  */
 public class Partie
 {
@@ -57,7 +58,15 @@ public class Partie
 		this.score = 0;
 	}
 
-	// FIXME  autres attributs ?
+	/*
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString()
+	{
+		return "Partie - nbTours = " + this.nbTours + ", nbUnites = " + this.nbUnites + ", nbTowers = " + this.nbTowers + ", score = " + this.score;
+	}
+
+	// FIXME autres attributs ?
 
 	// FIXME méthodes ?
 }

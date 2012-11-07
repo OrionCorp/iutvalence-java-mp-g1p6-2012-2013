@@ -54,12 +54,12 @@ public class Unite
 	}
 	
 	
-	//FIXME compléter le commentaire
+	//FIXME (FIXED) compléter le commentaire
 	/**
-	 * Créer une unité dont on défini les différentes caractéristiques
-	 * @param pv
-	 * @param pa
-	 * @param position
+	 * Créer une unité dont on définit les différentes caractéristiques
+	 * @param pv Points de vie de l'unité
+	 * @param pa Points d'attaque de l'unité
+	 * @param position Position de l'unité
 	 */
 	public Unite(int pv, int pa, Coordonnees position)
 	{

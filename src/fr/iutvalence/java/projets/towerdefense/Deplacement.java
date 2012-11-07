@@ -1,7 +1,11 @@
 package fr.iutvalence.java.projets.towerdefense;
 
 
-// FIXME commentaire
+// FIXME (FIXED) commentaire
+
+/**
+ * Enumération contenant les variables de déplacement des unités
+ */
 public enum Deplacement
 {
 	/**

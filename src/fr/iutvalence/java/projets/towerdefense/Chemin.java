@@ -22,13 +22,9 @@ public class Chemin
 	private final Deplacement[] tabDeplacements;
 
 	/**
-	 * Chemin : contient les coordonées de spawn des unités ainsi que les déplacements qu'elles deveront effectuer afin
-	 * de traverser la matrice
-	 * 
-	 * @param coorDepart
-	 *            : permet de définir le point de départ des unités (Coordonnees)
-	 * @param tabDeplacements
-	 *            : permetr de définir les déplacements à effectuer (int[])
+	 * Permet de créer un chemin contenant le point de départ des unités ainsi que les déplacements à effectuer
+	 * @param coorDepart Permet de définir le point de départ des unités (Coordonnees)
+	 * @param tabDeplacements Permet de définir les déplacements à effectuer (int[])
 	 */
 	public Chemin(Coordonnees coorDepart, Deplacement[] tabDeplacements)
 	{
