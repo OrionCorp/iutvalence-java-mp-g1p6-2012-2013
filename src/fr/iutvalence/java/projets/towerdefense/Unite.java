@@ -54,7 +54,6 @@ public class Unite
 	}
 	
 	
-	//FIXME (FIXED) compléter le commentaire
 	/**
 	 * Créer une unité dont on définit les différentes caractéristiques
 	 * @param pv Points de vie de l'unité

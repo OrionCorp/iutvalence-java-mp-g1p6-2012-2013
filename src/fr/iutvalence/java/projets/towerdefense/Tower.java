@@ -22,7 +22,6 @@ public class Tower
 	private final int porteeAttaque;
 	
 	
-	// FIXME (FIXED) compléter le commentaire
 	/**
 	 * Créer une tower avec des caractéristiques données
 	 * @param pointsAttaque Points d'attaque de la tower

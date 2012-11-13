@@ -1,6 +1,4 @@
 package fr.iutvalence.java.projets.towerdefense;
-
-// FIXME (FIXED) mettre un lien commenté sur le wiki
 /**
  * Permet la definition d'une partie.
  * Pour plus de détails, se référer au <a href="https://github.com/sebastienjean/iutvalence-java-mp-g1p6-2012-2013/wiki">wiki</a>
