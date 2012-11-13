@@ -21,6 +21,11 @@ public class Tower
 	 */
 	private final int porteeAttaque;
 	
+	/**
+	 * Temps de rechargement de la tower
+	 */
+	private final int tempsRechargement;
+	
 	
 	/**
 	 * Créer une tower avec des caractéristiques données
@@ -28,10 +33,11 @@ public class Tower
 	 * @param porteeAttaque Portée de l'attaque de la tower
 	 * @param pos Position de la tower
 	 */
-	public Tower(int pointsAttaque, int porteeAttaque, Coordonnees pos)
+	public Tower(int pointsAttaque, int porteeAttaque,int tempsRechargement, Coordonnees pos)
 	{
 		this.pointsAttaque = pointsAttaque;
 		this.porteeAttaque = porteeAttaque;
+		this.tempsRechargement = tempsRechargement;
 		this.pos = pos;
 	}
 

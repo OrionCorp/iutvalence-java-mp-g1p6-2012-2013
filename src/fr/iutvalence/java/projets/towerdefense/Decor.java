@@ -23,5 +23,15 @@ public enum Decor
 	/**
 	 * Correspond au décor mur
 	 */
-	MUR;
+	MUR,
+	
+	/**
+	 * Correspond au décor de la tower
+	 */
+	TOWER,
+	
+	/**
+	 * Correspond au décor d'une unité
+	 */
+	UNITE;
 }

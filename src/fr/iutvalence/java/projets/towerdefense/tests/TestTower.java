@@ -11,7 +11,7 @@ public class TestTower
 	public static void main(String[] args)
 	{
 		Coordonnees pos = new Coordonnees(6,6);
-		Tower tower = new Tower(10,5,pos);
+		Tower tower = new Tower(10,5,5,pos);
 		System.out.print(tower);
 	}
 

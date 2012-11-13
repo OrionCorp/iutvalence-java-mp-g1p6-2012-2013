@@ -84,6 +84,8 @@ public class Matrice
 					case HERBE : res = res +"H"; break;
 					case ROUTE : res = res +"R"; break;
 					case TERRE : res = res +"T"; break;
+					case TOWER : res = res +"O"; break;
+					case UNITE : res = res +"X"; break;
 				}
 				
 				res = res + " ";

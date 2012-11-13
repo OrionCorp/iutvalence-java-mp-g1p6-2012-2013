@@ -9,8 +9,9 @@ public class TestPartie
 
 	/**
 	 * @param args
+	 * @throws CoordonneesMatriceException 
 	 */
-	public static void main(String[] args)
+	public static void main(String[] args) throws CoordonneesMatriceException
 	{
 		Coordonnees pointDepart = new Coordonnees(4, 0);
 		Deplacement[] parcours = new Deplacement[]
@@ -35,5 +36,14 @@ public class TestPartie
 		
 		Partie partieCourante = new Partie(matriceCourante);
 		partieCourante.demarrer();
+		
+		Coordonnees posTower1 = new Coordonnees(5,5); 
+		Tower tower1 = new Tower(5,5,2,posTower1);
+		
+		matriceCourante.setBackgroundAt(posTower1, Decor.TOWER);
+		
+		System.out.println("\n");
+		System.out.println(matriceCourante);
+		
 	}
 }
