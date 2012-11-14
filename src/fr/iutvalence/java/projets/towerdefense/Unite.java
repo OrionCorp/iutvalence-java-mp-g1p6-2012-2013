@@ -4,7 +4,7 @@ package fr.iutvalence.java.projets.towerdefense;
  * Permet de gérer les untiés.
  * Une unité est caractérisée par des points de vie, d'attaque, et une position sur la carte 
  */
-public class Unite
+public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 {
 
 	/* VARIABLES UNITE DEFAULT ------------------------------ */
@@ -22,7 +22,7 @@ public class Unite
 	/**
 	 * Position initiale des unités spawnant
 	 */
-	private final static Coordonnees POSITION_UNITE = new Coordonnees(0, 0);
+	private final static Coordonnees POSITION_UNITE = new Coordonnees(4, 0);
 
 	/* VARIABLES UNITE ------------------------------ */
 
@@ -37,20 +37,14 @@ public class Unite
 	private int pointsVie;
 
 	/**
-	 * Emplacement de l'unité, représenté par un objet "Coordonnees"
-	 */
-	private Coordonnees pos;
-
-	/**
 	 * Créer une unité de niveau 1,en utilisant les valeurs par défaut 
 	 */
 	public Unite()
 	{
 
-		super();
+		super(POSITION_UNITE, Type.UNITE);
 		this.pointsVie = PV_UNITE_DEFAULT;
 		this.pointsAttaque = PA_UNITE_DEFAULT;
-		this.pos = POSITION_UNITE;
 	}
 	
 	
@@ -60,12 +54,11 @@ public class Unite
 	 * @param pa Points d'attaque de l'unité
 	 * @param position Position de l'unité
 	 */
-	public Unite(int pv, int pa, Coordonnees position)
+	public Unite(int pv, int pa, Coordonnees pos)
 	{
-		super();
+		super(pos, Type.UNITE);
 		this.pointsVie = pv;
 		this.pointsAttaque = pa;
-		this.pos = position;
 	}
 
 	/**
@@ -87,20 +80,10 @@ public class Unite
 	}
 
 	/**
-	 * Obtenir les coordonnées de l'unité
-	 * @return les coordonnées de l'unité
-	 */
-	public Coordonnees getPos()
-	{
-		return this.pos;
-	}
-
-	/**
 	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
 	{
-		return "Unité -- Points d'Attaque = " + this.pointsAttaque + ", Points de Vie = " + this.pointsVie + ", Position = " + this.pos;
+		return "Unité -- Points d'Attaque = " + this.pointsAttaque + ", Points de Vie = " + this.pointsVie + ", Position = " + this.getPos();
 	}
-	
 }

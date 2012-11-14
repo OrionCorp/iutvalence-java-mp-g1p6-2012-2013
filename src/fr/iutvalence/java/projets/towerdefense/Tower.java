@@ -4,12 +4,8 @@ package fr.iutvalence.java.projets.towerdefense;
  * Permet de manipuler toutes les tours du jeu
  */
 
-public class Tower
-{	
-	/**
-	 * Position de la tower
-	 */
-	private Coordonnees pos;
+public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
+{
 	
 	/**
 	 * Points d'attaque de la tower
@@ -35,10 +31,10 @@ public class Tower
 	 */
 	public Tower(int pointsAttaque, int porteeAttaque,int tempsRechargement, Coordonnees pos)
 	{
+		super(pos, Type.TOWER);
 		this.pointsAttaque = pointsAttaque;
 		this.porteeAttaque = porteeAttaque;
 		this.tempsRechargement = tempsRechargement;
-		this.pos = pos;
 	}
 
 	/*
@@ -46,6 +42,6 @@ public class Tower
 	 */
 	public String toString()
 	{
-		return "Tower -- Position = " + this.pos + ", points d'attaque = " + this.pointsAttaque + ", Portée de l'attaque = " + this.porteeAttaque;
+		return "Tower -- Position = " + this.getPos() + ", points d'attaque = " + this.pointsAttaque + ", Portée de l'attaque = " + this.porteeAttaque;
 	}
 }

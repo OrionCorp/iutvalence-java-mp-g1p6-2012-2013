@@ -37,13 +37,13 @@ public class TestPartie
 		Partie partieCourante = new Partie(matriceCourante);
 		partieCourante.demarrer();
 		
-		Coordonnees posTower1 = new Coordonnees(5,5); 
-		Tower tower1 = new Tower(5,5,2,posTower1);
+		Tower tower1 = new Tower(5,5,2, new Coordonnees(5,5));
+		Unite unite1 = new Unite();
 		
-		matriceCourante.setBackgroundAt(posTower1, Decor.TOWER);
+		matriceCourante.placerElement(tower1);
+		matriceCourante.placerElement(unite1);
 		
 		System.out.println("\n");
 		System.out.println(matriceCourante);
-		
 	}
 }

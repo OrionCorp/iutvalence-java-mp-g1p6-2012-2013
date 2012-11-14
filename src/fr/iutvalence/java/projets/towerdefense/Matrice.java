@@ -156,6 +156,18 @@ public class Matrice
 	{
 		return this.chemin;
 	}
-
-
+	
+	/**
+	 * @param element Passage de l'élément à placer sur la matrice
+	 * @throws CoordonneesMatriceException
+	 */
+	public void placerElement(Element element) throws CoordonneesMatriceException{
+		
+		if (element.getType() == Type.TOWER){
+			this.setBackgroundAt(element.getPos(), Decor.TOWER);
+		}
+		else{
+			this.setBackgroundAt(element.getPos(), Decor.UNITE);
+		}
+	}
 }
