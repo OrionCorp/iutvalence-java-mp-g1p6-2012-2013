@@ -75,6 +75,8 @@ public class Partie
 	public void demarrer()
 	{
 		System.out.print(this.matrice);
+		Unite[] tabUnite;
+		Tower[] tabTower;
 	}
 	
 	// FIXME autres attributs ?
