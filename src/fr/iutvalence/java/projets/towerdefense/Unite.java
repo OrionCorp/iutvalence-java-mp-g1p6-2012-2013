@@ -15,6 +15,15 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 	private final static int PV_UNITE_DEFAULT = 25;
 
 	/**
+	 * Changer les points de vie de l'unité
+	 * @param pointsVie
+	 */
+	public void setPointsVie(int pointsVie)
+	{
+		this.pointsVie = pointsVie;
+	}
+
+	/**
 	 * Points d'attaque par defaut de l'unité de niveau 1
 	 */
 	private final static int PA_UNITE_DEFAULT = 10;
@@ -77,6 +86,21 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 	public int getPointsVie()
 	{
 		return this.pointsVie;
+	}
+	
+	/**
+	 * Enlève l'unité de la matrice et du tableau d'unité si elle est morte
+	 * @return True si l'unité est morte, false sinon
+	 */
+	public boolean mortOuVif(){
+		//Supprime l'unité si elle est morte, ne fait rien si elle est toujours en vie
+		if (this.pointsVie <= 0){
+			//On enlève l'unité de la matrice et du tabUnite
+			
+			return true;
+		}
+		else
+			return false;
 	}
 
 	/**

@@ -113,12 +113,13 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 	 */
 	public boolean fireInTheHole(Unite[] tabUnite){
 		if (this.autorisationTir == 0){
-			if (this.closerEnemy(tabUnite) == ){ //Ne pas faire de test, tirer sur l'unité renvoyée
-				// Tire sur l'ennemi le plus près
-				this.setAutorisationTir(this.tempsRechargement); // Reinitialise le temps de rechargement
-				return true;
-			}
-			else return false;
+			// Tire sur l'ennemi le plus près
+			tabUnite[0].setPointsVie(tabUnite[0].getPointsVie()-this.pointsAttaque);
+			// Faire une fonction mort ou vif
+			tabUnite[0].mortOuVif();
+			//Recharger la tower
+			this.setAutorisationTir(this.tempsRechargement); // Reinitialise le temps de rechargement
+			return true;
 		}
 		else return false;
 	}	

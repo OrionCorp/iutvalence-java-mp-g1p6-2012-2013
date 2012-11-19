@@ -170,4 +170,14 @@ public class Matrice
 			this.setBackgroundAt(element.getPos(), Decor.UNITE);
 		}
 	}
+	
+	public void enleverElement(Element element) throws CoordonneesMatriceException{
+		
+		if (element.getType() == Type.TOWER){
+			this.setBackgroundAt(element.getPos(), Decor.TERRE);
+		}
+		else{
+			this.setBackgroundAt(element.getPos(), Decor.ROUTE);
+		}
+	}
 }
