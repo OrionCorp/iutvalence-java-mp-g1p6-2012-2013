@@ -90,6 +90,8 @@ public class Partie
 	{
 		System.out.print(this.matrice);
 		// TODO A FINIR RAPIDEMENT ! Pour plus de détails, se référer au <a href="https://github.com/sebastienjean/iutvalence-java-mp-g1p6-2012-2013/wiki/Fonctionnement-du-jeu">Fonctionnement</a>
+		// Parcours de la liste des towers
+		
 			
 	}
 	
