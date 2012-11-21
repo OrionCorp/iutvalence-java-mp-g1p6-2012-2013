@@ -44,12 +44,26 @@ public class Partie
 	 */
 	private int score;
 	
+	/**
+	 * Liste des unités présentes dans la partie
+	 */
+	private Unite[] listeUnite;
+
+	/**
+	 * Liste des Towers présentes dans la partie
+	 */
+	private Tower[] listeTower;
+
+	/**
+	 * Matrice utilisée dans la partie
+	 */
 	private Matrice matrice;
 
 	
 	//FIXME PERSO Corriger le commentaire
 	/**
 	 * Gère une partie dont les nombres de tours, tower, score et unités sont initialisés à 0
+	 * @param matrice La matrice utilisé dans la partie
 	 */
 	public Partie(Matrice matrice)
 	{
@@ -75,11 +89,12 @@ public class Partie
 	public void demarrer()
 	{
 		System.out.print(this.matrice);
-		Unite[] tabUnite;
-		Tower[] tabTower;
+		// A chaque tour :
+			
 	}
 	
-	// FIXME autres attributs ?
+	
+	// FIXME (FIXED) autres attributs ?
 
-	// FIXME méthodes ?
+	// FIXME (FIXED) méthodes ?
 }

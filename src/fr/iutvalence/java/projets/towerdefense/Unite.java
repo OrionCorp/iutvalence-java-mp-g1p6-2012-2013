@@ -16,7 +16,7 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 
 	/**
 	 * Changer les points de vie de l'unité
-	 * @param pointsVie
+	 * @param pointsVie Les points de vie de l'unité
 	 */
 	public void setPointsVie(int pointsVie)
 	{
@@ -61,7 +61,7 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 	 * Créer une unité dont on définit les différentes caractéristiques
 	 * @param pv Points de vie de l'unité
 	 * @param pa Points d'attaque de l'unité
-	 * @param position Position de l'unité
+	 * @param pos Position de l'unité
 	 */
 	public Unite(int pv, int pa, Coordonnees pos)
 	{

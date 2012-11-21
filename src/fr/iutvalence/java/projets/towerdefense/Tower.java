@@ -33,6 +33,7 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 	 * Créer une tower avec des caractéristiques données
 	 * @param pointsAttaque Points d'attaque de la tower
 	 * @param porteeAttaque Portée de l'attaque de la tower
+	 * @param tempsRechargement Le temps de rechargement de la Tower
 	 * @param pos Position de la tower
 	 */
 	public Tower(int pointsAttaque, int porteeAttaque,int tempsRechargement, Coordonnees pos)
@@ -96,6 +97,7 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 	 * Obtenir l'unité la plus proche de notre Tower.
 	 * @param tabUnite Le tableau des unités présentes sur la matrice
 	 * @return L'unité la plus proche de notre Tower
+	 * @throws ListeUniteException 
 	 */
 	public Unite closerEnemy(Unite[] tabUnite) throws ListeUniteException
 	{
@@ -145,16 +147,20 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 	}
 	
 	/**
-	 * Tire sur l'unité
-	 * @param unite Unité attaquée !
+	 * Tire sur l'unité la plus proche si elle existe, ne fait rien sinon
+	 * @param tabUnite Unité attaquée !
 	 * @return True si tiré, false si pas tiré.
+	 * @throws ListeUniteException 
 	 */
-	public boolean fireInTheHole(Unite unite){
+	public boolean tirer(Unite[] tabUnite) throws ListeUniteException{
+		// On vérifie que la Tower peut tirer
 		if (this.autorisationTir == 0){
+			Unite unite = this.closerEnemy(tabUnite);
 			// Tire sur l'ennemi le plus près
 			unite.setPointsVie(unite.getPointsVie()-this.pointsAttaque);
 			if (unite.mort() == true){
-				//Lancer la supression de l'unité
+				//TODO Lancer la supression de l'unité
+				
 			}
 			// Reinitialise le temps de rechargement
 			this.setAutorisationTir(this.tempsRechargement); 
