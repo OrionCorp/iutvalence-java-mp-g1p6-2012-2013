@@ -79,31 +79,69 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 		}
 	}
 	
-	//TODO A faire !!! 
+	/**
+	 * Obtenir la valeur absolue de la distance entre l'unité d'un tableau et la tower.
+	 * @param tabUnite Un tableau d'unité
+	 * @param i Un entier
+	 * @return La valeur absolue de la distance entre l'unité d'un tableau et la tower.
+	 */
+	public int distanceTowerUnite (Unite[] tabUnite, int i)
+	{
+		return Math.abs( this.getPos().getX() - tabUnite[i].getPos().getX() ) + 
+		Math.abs( this.getPos().getY() - tabUnite[i].getPos().getY() );
+	}
+	
+	//TODO Commentaires 
 	/**
 	 * Obtenir l'unité la plus proche de notre Tower.
 	 * @param tabUnite Le tableau des unités présentes sur la matrice
 	 * @return L'unité la plus proche de notre Tower
 	 */
-	public Unite closerEnemy(Unite[] tabUnite){
+	public Unite closerEnemy(Unite[] tabUnite) throws ListeUniteException
+	{
+		if (tabUnite[0] == null)
+		{
+			throw new ListeUniteException();
+		}
 		
-		Unite[] tabUniteRes; // Tableau resultat ordonné, on renverra le permier élément
+		//
+		Unite uniteRes = new Unite(-1, -1, new Coordonnees(-1,-1));
 		
-		for (int i = 0; i < tabUnite.length; i++){
+		for (int i = 0; i < tabUnite.length; i++)
+		{
 			
 			int X = Math.abs(this.getPos().getX() - tabUnite[i].getPos().getX());
 			int Y = Math.abs(this.getPos().getY() - tabUnite[i].getPos().getY());
 
-			if ((X == Y) && (X + Y <= this.porteeAttaque)){
-				//OK
+			if ((X == Y) && (X + Y <= this.porteeAttaque)){ // Gère la diagonale
+				int j = 0;
+				while (j <= tabUnite.length)
+				{
+					if (distanceTowerUnite(tabUnite, j) <= X + Y)
+					{
+						 uniteRes = tabUnite[j];
+					}
+					j++;
+				}
+				
 			}
 			
-			else if (X + Y < this.porteeAttaque){
-				//OK
+			else if (X + Y < this.porteeAttaque) // Gère les lignes droites
+			{
+				//Dans le champs
+				int j = 0;
+				while (j <= tabUnite.length)
+				{
+					if (distanceTowerUnite(tabUnite, j) <= X + Y)
+					{
+						 uniteRes = tabUnite[j];
+					}
+					j++;
+				}
 			}
 		}
 		
-		return tabUniteRes[0];
+		return uniteRes;
 	}
 	
 	/**
@@ -111,14 +149,15 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 	 * @param unite Unité attaquée !
 	 * @return True si tiré, false si pas tiré.
 	 */
-	public boolean fireInTheHole(Unite[] tabUnite){
+	public boolean fireInTheHole(Unite unite){
 		if (this.autorisationTir == 0){
 			// Tire sur l'ennemi le plus près
-			tabUnite[0].setPointsVie(tabUnite[0].getPointsVie()-this.pointsAttaque);
-			// Faire une fonction mort ou vif
-			tabUnite[0].mortOuVif();
-			//Recharger la tower
-			this.setAutorisationTir(this.tempsRechargement); // Reinitialise le temps de rechargement
+			unite.setPointsVie(unite.getPointsVie()-this.pointsAttaque);
+			if (unite.mort() == true){
+				//Lancer la supression de l'unité
+			}
+			// Reinitialise le temps de rechargement
+			this.setAutorisationTir(this.tempsRechargement); 
 			return true;
 		}
 		else return false;

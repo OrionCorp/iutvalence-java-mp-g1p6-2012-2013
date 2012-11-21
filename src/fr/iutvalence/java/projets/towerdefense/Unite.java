@@ -89,14 +89,11 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 	}
 	
 	/**
-	 * Enlève l'unité de la matrice et du tableau d'unité si elle est morte
+	 * Obtenir un booléen à True si l'unité est morte, False sinon.
 	 * @return True si l'unité est morte, false sinon
 	 */
-	public boolean mortOuVif(){
-		//Supprime l'unité si elle est morte, ne fait rien si elle est toujours en vie
+	public boolean mort(){
 		if (this.pointsVie <= 0){
-			//On enlève l'unité de la matrice et du tabUnite
-			
 			return true;
 		}
 		else

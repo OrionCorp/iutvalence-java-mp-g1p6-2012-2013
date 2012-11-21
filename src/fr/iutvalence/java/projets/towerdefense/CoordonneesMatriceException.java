@@ -10,7 +10,7 @@ public class CoordonneesMatriceException extends Exception
 	 */
 	public CoordonneesMatriceException()
 	{
-		// Pas d'affichage console ici (à discuter)
+		// TODO Pas d'affichage console ici (à discuter)
 		System.out.println("Les coordonnées fournies sont en dehors de la carte !");
 	}
 
