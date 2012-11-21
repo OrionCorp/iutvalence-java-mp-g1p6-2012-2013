@@ -89,7 +89,7 @@ public class Partie
 	public void demarrer()
 	{
 		System.out.print(this.matrice);
-		// A chaque tour :
+		// TODO A FINIR RAPIDEMENT ! Pour plus de détails, se référer au <a href="https://github.com/sebastienjean/iutvalence-java-mp-g1p6-2012-2013/wiki/Fonctionnement-du-jeu">Fonctionnement</a>
 			
 	}
 	
