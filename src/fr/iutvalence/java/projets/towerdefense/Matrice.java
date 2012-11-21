@@ -157,8 +157,8 @@ public class Matrice
 		return this.chemin;
 	}
 	
-	/**
-	 * @param element Passage de l'élément à placer sur la matrice
+	/** Ajoute un élément sur la matrice
+	 * @param element Un élément à placer sur la matrice
 	 * @throws CoordonneesMatriceException
 	 */
 	public void placerElement(Element element) throws CoordonneesMatriceException{
@@ -171,6 +171,11 @@ public class Matrice
 		}
 	}
 	
+	/**
+	 * Supprimer un élément de la matrice
+	 * @param element Une élément que l'on souhaite enlever de la matrice
+	 * @throws CoordonneesMatriceException
+	 */
 	public void enleverElement(Element element) throws CoordonneesMatriceException{
 		
 		if (element.getType() == Type.TOWER){

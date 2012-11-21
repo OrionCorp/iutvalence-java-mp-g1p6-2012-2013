@@ -107,4 +107,12 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 	{
 		return "Unité -- Points d'Attaque = " + this.pointsAttaque + ", Points de Vie = " + this.pointsVie + ", Position = " + this.getPos();
 	}
+	
+	
+	/**
+	 * Deplacer une unité sur le chemin de la matrice
+	 */
+	public void deplacerUnite(){
+		 
+	}
 }
