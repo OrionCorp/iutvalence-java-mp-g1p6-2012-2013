@@ -111,8 +111,36 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 	
 	/**
 	 * Deplacer une unité sur le chemin de la matrice
+	 * @param unite 
+	 * @param matrice 
 	 */
-	public void deplacerUnite(){
-		 
+	public void deplacerUnite(Matrice matrice)
+	{
+		Chemin chemin = matrice.getChemin();;
+		Deplacement[] deplacement = matrice.getChemin().getTabDeplacements();
+		switch (deplacement[chemin.getIndiceDeplacement()]) {
+			case BAS:
+				Coordonnees pos_bas = new Coordonnees(this.getPos().getX(), this.getPos().getY() + 1); 
+				this.setPos(pos_bas);
+				break;
+			case HAUT:
+				Coordonnees pos_haut = new Coordonnees(this.getPos().getX(), this.getPos().getY() - 1); 
+				this.setPos(pos_haut);
+				break;
+			case DROITE:
+				Coordonnees pos_droite = new Coordonnees(this.getPos().getX() + 1, this.getPos().getY()); 
+				this.setPos(pos_droite);
+				break;
+			case GAUCHE:
+				Coordonnees pos_gauche = new Coordonnees(this.getPos().getX() - 1, this.getPos().getY()); 
+				this.setPos(pos_gauche);
+				break;
+			case QG:
+				Coordonnees pos_base = new Coordonnees(-1, -1); 
+				this.setPos(pos_base);
+				break;
+		}
+		chemin.setIndiceDeplacement(chemin.getIndiceDeplacement() + 1); 
 	}
+	
 }

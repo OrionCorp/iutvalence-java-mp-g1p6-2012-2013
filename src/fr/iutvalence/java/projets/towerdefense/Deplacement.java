@@ -21,7 +21,12 @@ public enum Deplacement
 	GAUCHE,
 
 	/**
-	 * Déplacement vers le droite
+	 * Déplacement vers la droite
 	 */
-	DROITE;
+	DROITE,
+	
+	/**
+	 * Déplacement vers le QG
+	 */
+	QG;
 }

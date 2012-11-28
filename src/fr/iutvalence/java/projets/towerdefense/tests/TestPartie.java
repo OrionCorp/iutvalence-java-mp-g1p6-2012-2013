@@ -10,8 +10,9 @@ public class TestPartie
 	/**
 	 * @param args
 	 * @throws CoordonneesMatriceException 
+	 * @throws ListeUniteException 
 	 */
-	public static void main(String[] args) throws CoordonneesMatriceException
+	public static void main(String[] args) throws CoordonneesMatriceException, ListeUniteException
 	{
 		Coordonnees pointDepart = new Coordonnees(4, 0);
 		Deplacement[] parcours = new Deplacement[]
@@ -39,11 +40,14 @@ public class TestPartie
 		
 		Tower tower1 = new Tower(5,5,2, new Coordonnees(5,5));
 		Unite unite1 = new Unite();
+		partieCourante.addUniteListe(unite1);
 		
 		matriceCourante.placerElement(tower1);
 		matriceCourante.placerElement(unite1);
 		
 		System.out.println("\n");
 		System.out.println(matriceCourante);
+		
+		//TODO : Finir le test
 	}
 }

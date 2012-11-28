@@ -20,6 +20,12 @@ public class Chemin
 	 * Tableau contenant les déplacements que les unités deveront effectuer afin de traverser la matrice
 	 */
 	private final Deplacement[] tabDeplacements;
+	
+	
+	/**
+	 * Entier permettant de connaître son avancement sur le chemin de la matrice
+	 */
+	private int indiceDeplacement;
 
 	/**
 	 * Permet de créer un chemin contenant le point de départ des unités ainsi que les déplacements à effectuer
@@ -31,6 +37,15 @@ public class Chemin
 		super();
 		this.coorDepart = coorDepart;
 		this.tabDeplacements = tabDeplacements;
+		this.indiceDeplacement = 0;
+	}
+
+	/**
+	 * @return
+	 */
+	public Deplacement[] getTabDeplacements()
+	{
+		return this.tabDeplacements;
 	}
 
 	// TODO A compléter
@@ -54,6 +69,16 @@ public class Chemin
 	public String toString()
 	{
 		return "Coodonnées de départ = " + this.coorDepart + ", Tableau des déplacements = " + Arrays.toString(this.tabDeplacements);
+	}
+
+	public int getIndiceDeplacement()
+	{
+		return this.indiceDeplacement;
+	}
+
+	public void setIndiceDeplacement(int indiceDeplacement)
+	{
+		this.indiceDeplacement = indiceDeplacement;
 	}
 
 }

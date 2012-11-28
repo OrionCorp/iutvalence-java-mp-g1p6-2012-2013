@@ -8,12 +8,12 @@ public class Coordonnees
 	/**
 	 * Abscisse
 	 */
-	private final int x;
+	private int x;
 
 	/**
 	 * Ordonnée
 	 */
-	private final int y;
+	private int y;
 
 	/**
 	 * Permet de définir un objet "Coordonnees" composé de deux entiers donnée en paramètres

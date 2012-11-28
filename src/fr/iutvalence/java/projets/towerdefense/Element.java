@@ -1,5 +1,4 @@
 package fr.iutvalence.java.projets.towerdefense;
-import fr.iutvalence.java.projets.towerdefense.*;
 
 public class Element
 {
@@ -13,13 +12,22 @@ public class Element
 	 */
 	private Type type;
 	
+
+	/**
+	 * @param pos
+	 */
+	public void setPos(Coordonnees pos)
+	{
+		this.pos = pos;
+	}
+
 	/**
 	 * Obtenir la position de l'élément
 	 * @return La position de l'élément
 	 */
 	public Coordonnees getPos()
 	{
-		return pos;
+		return this.pos;
 	}
 
 	/**
@@ -28,7 +36,7 @@ public class Element
 	 */
 	public Type getType()
 	{
-		return type;
+		return this.type;
 	}
 
 	/**

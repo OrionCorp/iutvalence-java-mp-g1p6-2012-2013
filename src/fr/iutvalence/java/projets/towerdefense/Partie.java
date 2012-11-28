@@ -58,6 +58,11 @@ public class Partie
 	 * Matrice utilisée dans la partie
 	 */
 	private Matrice matrice;
+	
+	/**
+	 * Nombre de points de vide de la base
+	 */
+	private int pvQG;
 
 	
 	//FIXME PERSO Corriger le commentaire
@@ -74,7 +79,6 @@ public class Partie
 		this.score = 0;
 		this.matrice = matrice;
 	}
-
 	/*
 	 * @see java.lang.Object#toString()
 	 */
@@ -85,14 +89,60 @@ public class Partie
 
 	/**
 	 * Démarrer la partie
+	 * @throws ListeUniteException 
 	 */
-	public void demarrer()
+	public void demarrer() throws ListeUniteException
 	{
 		System.out.print(this.matrice);
 		// TODO A FINIR RAPIDEMENT ! Pour plus de détails, se référer au <a href="https://github.com/sebastienjean/iutvalence-java-mp-g1p6-2012-2013/wiki/Fonctionnement-du-jeu">Fonctionnement</a>
-		// Parcours de la liste des towers
-		
-			
+		// Parcours de la liste des towers, et tirs
+		for (int i = 0; i < this.listeTower.length; i++)
+		{
+			this.listeTower[i].tirer(this.listeUnite);
+		}
+		// Suppression des unités mortes
+		for (int i = 0; i < this.listeUnite.length; i++)
+		{
+			if (this.listeUnite[i].mort())
+			{
+				// Suppression de l'unité morte
+				this.listeUnite[i] = this.listeUnite[this.listeUnite.length];
+				this.listeUnite[this.listeUnite.length] = null;
+				
+			}
+		}
+		// Déplacement des unités
+		for (int i = 0; i < this.listeUnite.length; i++)
+		{
+			// Cas où une unité va sortir de la matrice et entrer dans le QG
+				this.listeUnite[i].deplacerUnite(this.matrice);
+		}
+		// Cas où l'unité entre dans la QG
+		Coordonnees finChemin = new Coordonnees(-1,-1);
+		for (int i = 0; i < this.listeUnite.length; i++)
+		{
+			if (this.listeUnite[i].getPos() == finChemin)
+			{
+				this.setPvQG(this.getPvQG() - this.listeUnite[i].getPointsAttaque());
+			}
+		}
+	}
+
+
+	public int getPvQG()
+	{
+		return pvQG;
+	}
+
+
+	public void setPvQG(int pvQG)
+	{
+		this.pvQG = pvQG;
+	}
+	
+	public void addUniteListe(Unite unite)
+	{
+		this.listeUnite[this.listeUnite.length + 1] = unite; 
 	}
 
 }
