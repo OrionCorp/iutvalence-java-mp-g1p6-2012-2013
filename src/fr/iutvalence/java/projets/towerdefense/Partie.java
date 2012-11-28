@@ -94,9 +94,5 @@ public class Partie
 		
 			
 	}
-	
-	
-	// FIXME (FIXED) autres attributs ?
 
-	// FIXME (FIXED) méthodes ?
 }
