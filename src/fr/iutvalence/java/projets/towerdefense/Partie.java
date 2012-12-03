@@ -72,6 +72,7 @@ public class Partie
 	 */
 	public Partie(Matrice matrice)
 	{
+		// FIXME tous les attributs doivent être initialisés !
 		super();
 		this.nbTours = 0;
 		this.nbTowers = 0;
