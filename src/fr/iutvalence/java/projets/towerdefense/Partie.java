@@ -1,4 +1,7 @@
 package fr.iutvalence.java.projets.towerdefense;
+
+import java.util.ArrayList;
+
 /**
  * Permet la definition d'une partie.
  * Pour plus de détails, se référer au <a href="https://github.com/sebastienjean/iutvalence-java-mp-g1p6-2012-2013/wiki">wiki</a>
@@ -21,6 +24,11 @@ public class Partie
 	 * Nombre maximal de towers sur la carte
 	 */
 	public final static int NBMAX_TOWERS = 25;
+	
+	/**
+	 * Coordonnées nulles utilisées pour signifier la fin du chemin
+	 */
+	public final static Coordonnees FIN_CHEMIN = new Coordonnees(-1,-1);
 
 	/* VARIABLES DE PARTIE ------------------------------ */
 
@@ -48,16 +56,23 @@ public class Partie
 	 * Liste des unités présentes dans la partie
 	 */
 	private Unite[] listeUnite;
+	//private ArrayList<Unite> listeUnite;
 
 	/**
 	 * Liste des Towers présentes dans la partie
 	 */
 	private Tower[] listeTower;
+	//private ArrayList<Tower> listeTower;
 
 	/**
 	 * Matrice utilisée dans la partie
 	 */
-	private Matrice matrice;
+	public Matrice matrice;
+	
+	/**
+	 * Copie de la matrice utilisée dans la partie (Ne doit pas être altérée)
+	 */
+	private Matrice matriceOriginale;
 	
 	/**
 	 * Nombre de points de vide de la base
@@ -69,16 +84,22 @@ public class Partie
 	/**
 	 * Gère une partie dont les nombres de tours, tower, score et unités sont initialisés à 0
 	 * @param matrice La matrice utilisé dans la partie
+	 * @param pvQG 
+	 * @param arrayListeEmpty 
 	 */
-	public Partie(Matrice matrice)
+	public Partie(Matrice matrice, int pvQG)
 	{
-		// FIXME tous les attributs doivent être initialisés !
+		// FIXME (FIXED) tous les attributs doivent être initialisés !
 		super();
 		this.nbTours = 0;
 		this.nbTowers = 0;
 		this.nbUnites = 0;
 		this.score = 0;
 		this.matrice = matrice;
+		this.matriceOriginale = matrice;
+		this.listeTower = null;
+		this.listeUnite = null;
+		this.pvQG = pvQG;
 	}
 	/*
 	 * @see java.lang.Object#toString()
@@ -119,10 +140,9 @@ public class Partie
 				this.listeUnite[i].deplacerUnite(this.matrice);
 		}
 		// Cas où l'unité entre dans la QG
-		Coordonnees finChemin = new Coordonnees(-1,-1);
 		for (int i = 0; i < this.listeUnite.length; i++)
 		{
-			if (this.listeUnite[i].getPos() == finChemin)
+			if (this.listeUnite[i].getPos() == FIN_CHEMIN)
 			{
 				this.setPvQG(this.getPvQG() - this.listeUnite[i].getPointsAttaque());
 			}
@@ -141,9 +161,85 @@ public class Partie
 		this.pvQG = pvQG;
 	}
 	
+	/**
+	 * Ajouter une unité dans la liste des unités
+	 * @param unite
+	 */
 	public void addUniteListe(Unite unite)
 	{
 		this.listeUnite[this.listeUnite.length + 1] = unite; 
 	}
 
+	/**
+	 * Ajouter une tower dans la liste des towers
+	 * @param tower
+	 */
+	public void addTowerListe(Tower tower)
+	{
+		this.listeTower[this.listeTower.length + 1] = tower; 
+	}
+	
+	/**
+	 * Parcours la liste des unités afin d'éffectuer toute les actions possibles
+	 * 
+	 * @throws CoordonneesMatriceException
+	 * @throws ListeUniteException
+	 */
+	public void parcoursListeTowers() throws CoordonneesMatriceException, ListeUniteException
+	{
+		for (int i = 0; i < this.listeTower.length; i++)
+		{
+			if (this.matrice.getBackgroundAt(listeTower[i].getPos()) != Decor.TOWER) //On place la tour si elle n'a pas déjà été placée
+			{
+				this.matrice.placerElement(listeTower[i]);
+			}
+			listeTower[i].tirer(this.listeUnite);
+		}
+	}
+	
+	/**
+	 * Parcours la liste des unités afin d'éffectuer toute les actions possibles
+	 */
+	public void parcoursListeUnites()
+	{
+		for (int i = 0; i < this.listeUnite.length; i++)
+		{
+			//Placer ou avancer
+		}
+	}
+	
+	/**
+	 * Permet de gérer un tour de jeu
+	 * Parcours les tableau d'éléments
+	 * 
+	 * @throws CoordonneesMatriceException
+	 * @throws ListeUniteException
+	 */
+	public void jouerTour() throws CoordonneesMatriceException, ListeUniteException
+	{
+		parcoursListeTowers();
+		parcoursListeUnites();
+		
+		if (this.getPvQG() <= 0)
+		{
+			this.finPartie();
+		}
+	}
+	
+	/**
+	 * Gère la fin de partie
+	 */
+	public void finPartie()
+	{
+		if (this.getPvQG() <= 0)
+		{
+			System.out.println("Vous avez perdu");
+			//Ajouter le nombre de tours ou le score
+		}
+		else
+		{
+			System.out.println("Vous avez gagné");
+			//Ajouter le nombre de tours ou le score			
+		}
+	}
 }
