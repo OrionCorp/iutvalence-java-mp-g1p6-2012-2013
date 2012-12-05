@@ -58,7 +58,7 @@ public class TestPartie
 		Coordonnees pointDepart = new Coordonnees(4, 0);
 		Deplacement[] parcours = new Deplacement[]
 			{ Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE,
-					Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE };
+					Deplacement.DROITE, Deplacement.DROITE, Deplacement.QG };
 		Chemin chemin = new Chemin(pointDepart, parcours);
 		Decor[][] background = new Decor[][]
 			//@formatter:off
@@ -80,10 +80,14 @@ public class TestPartie
 		System.out.println(partieTest1.matrice);
 		
 		partieTest1.addTowerListe(new Tower(5,5,2, new Coordonnees(5,5)));
+		partieTest1.addTowerListe(new Tower(5,5,2, new Coordonnees(1,6)));
 		partieTest1.addUniteListe(new Unite());
-
-		partieTest1.jouerTour();
 		
-		System.out.println(partieTest1.matrice);
+		for(int i = 0; i < 10; i++)
+		{
+			partieTest1.jouerTour();
+			System.out.println(partieTest1.getNbTours());
+			System.out.println(partieTest1.matrice);
+		}
 	}
 }

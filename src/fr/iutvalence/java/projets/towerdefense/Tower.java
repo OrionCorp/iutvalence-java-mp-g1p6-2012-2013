@@ -109,7 +109,7 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 		//
 		Unite uniteRes = new Unite(-1, -1, new Coordonnees(-1,-1));
 		
-		for (int i = 0; i < tabUnite.length; i++)
+		for (int i = 0; tabUnite[i] != null; i++)
 		{
 			
 			int X = Math.abs(this.getPos().getX() - tabUnite[i].getPos().getX());
@@ -117,7 +117,7 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 
 			if ((X == Y) && (X + Y <= this.porteeAttaque)){ // Gère la diagonale
 				int j = 0;
-				while (j <= tabUnite.length)
+				while (tabUnite[j] != null)
 				{
 					if (distanceTowerUnite(tabUnite, j) <= X + Y)
 					{

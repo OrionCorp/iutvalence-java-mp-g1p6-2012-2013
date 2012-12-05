@@ -97,8 +97,8 @@ public class Partie
 		this.score = 0;
 		this.matrice = matrice;
 		this.matriceOriginale = matrice;
-		this.listeTower = null;
-		this.listeUnite = null;
+		this.listeTower = new Tower[NBMAX_TOWERS];
+		this.listeUnite = new Unite[NBMAX_UNITS];
 		this.pvQG = pvQG;
 	}
 	/*
@@ -117,36 +117,40 @@ public class Partie
 	{
 		System.out.print(this.matrice);
 		// TODO A FINIR RAPIDEMENT ! Pour plus de détails, se référer au <a href="https://github.com/sebastienjean/iutvalence-java-mp-g1p6-2012-2013/wiki/Fonctionnement-du-jeu">Fonctionnement</a>
+		
 		// Parcours de la liste des towers, et tirs
-		for (int i = 0; i < this.listeTower.length; i++)
+		/*for (int i = 0; i < this.listeTower.length; i++)
 		{
 			this.listeTower[i].tirer(this.listeUnite);
-		}
+		}*/
+		
 		// Suppression des unités mortes
-		for (int i = 0; i < this.listeUnite.length; i++)
+		// A deplacer 
+		/*for (int i = 0; i < this.listeUnite.length; i++)
 		{
 			if (this.listeUnite[i].mort())
 			{
 				// Suppression de l'unité morte
 				this.listeUnite[i] = this.listeUnite[this.listeUnite.length];
 				this.listeUnite[this.listeUnite.length] = null;
-				
 			}
-		}
+		}*/
+		
 		// Déplacement des unités
-		for (int i = 0; i < this.listeUnite.length; i++)
+		/*for (int i = 0; i < this.listeUnite.length; i++)
 		{
 			// Cas où une unité va sortir de la matrice et entrer dans le QG
 				this.listeUnite[i].deplacerUnite(this.matrice);
-		}
+		}*/
+		
 		// Cas où l'unité entre dans la QG
-		for (int i = 0; i < this.listeUnite.length; i++)
+		/*for (int i = 0; i < this.listeUnite.length; i++)
 		{
 			if (this.listeUnite[i].getPos() == FIN_CHEMIN)
 			{
 				this.setPvQG(this.getPvQG() - this.listeUnite[i].getPointsAttaque());
 			}
-		}
+		}*/
 	}
 
 
@@ -167,16 +171,19 @@ public class Partie
 	 */
 	public void addUniteListe(Unite unite)
 	{
-		this.listeUnite[this.listeUnite.length + 1] = unite; 
+		this.listeUnite[this.nbUnites] = unite;
+		this.nbUnites += 1;
 	}
-
+	
 	/**
 	 * Ajouter une tower dans la liste des towers
 	 * @param tower
 	 */
 	public void addTowerListe(Tower tower)
 	{
-		this.listeTower[this.listeTower.length + 1] = tower; 
+		//this.listeTower[this.listeTower.length + 1] = tower; 
+		this.listeTower[this.nbTowers] = tower;
+		this.nbTowers += 1;
 	}
 	
 	/**
@@ -187,24 +194,37 @@ public class Partie
 	 */
 	public void parcoursListeTowers() throws CoordonneesMatriceException, ListeUniteException
 	{
-		for (int i = 0; i < this.listeTower.length; i++)
+		for (int i = 0; i < this.nbTowers; i++)
 		{
-			if (this.matrice.getBackgroundAt(listeTower[i].getPos()) != Decor.TOWER) //On place la tour si elle n'a pas déjà été placée
+			if (this.matrice.getBackgroundAt(this.listeTower[i].getPos()) != Decor.TOWER) //On place la tour si elle n'a pas déjà été placée
 			{
-				this.matrice.placerElement(listeTower[i]);
+				this.matrice.placerElement(this.listeTower[i]);
 			}
-			listeTower[i].tirer(this.listeUnite);
+			this.listeTower[i].tirer(this.listeUnite);
 		}
 	}
 	
 	/**
 	 * Parcours la liste des unités afin d'éffectuer toute les actions possibles
+	 * @throws CoordonneesMatriceException 
 	 */
-	public void parcoursListeUnites()
+	public void parcoursListeUnites() throws CoordonneesMatriceException
 	{
-		for (int i = 0; i < this.listeUnite.length; i++)
+		for (int i = 0; i < this.nbUnites; i++)
 		{
+			if (this.listeUnite[i].mort())
+			{
+				// Suppression de l'unité morte
+				this.listeUnite[i] = this.listeUnite[this.nbUnites];
+				this.listeUnite[this.nbUnites] = null;
+				this.nbUnites = this.nbUnites - 1;
+			}
 			//Placer ou avancer
+			if (this.matrice.getBackgroundAt(this.listeUnite[i].getPos()) == Decor.QG)
+			{
+				this.setPvQG(this.getPvQG() - this.listeUnite[i].getPointsAttaque());
+			}
+			this.listeUnite[i].deplacerUnite(this.matrice);
 		}
 	}
 	
@@ -224,6 +244,7 @@ public class Partie
 		{
 			this.finPartie();
 		}
+		this.nbTours += 1;
 	}
 	
 	/**
@@ -242,4 +263,19 @@ public class Partie
 			//Ajouter le nombre de tours ou le score			
 		}
 	}
+	public int getNbUnites()
+	{
+		return this.nbUnites;
+	}
+	public int getNbTowers()
+	{
+		return this.nbTowers;
+	}
+	public int getNbTours()
+	{
+		return this.nbTours;
+	}
+	
+	
 }
+

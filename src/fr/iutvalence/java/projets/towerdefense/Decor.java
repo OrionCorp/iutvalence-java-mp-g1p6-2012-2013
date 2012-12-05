@@ -33,5 +33,10 @@ public enum Decor
 	/**
 	 * Correspond au décor d'une unité
 	 */
-	UNITE;
+	UNITE,
+	
+	/**
+	 * Correspond au décor du QG
+	 */
+	QG;
 }
