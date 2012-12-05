@@ -1,5 +1,4 @@
 package fr.iutvalence.java.projets.towerdefense.tests;
-
 import fr.iutvalence.java.projets.towerdefense.Chemin;
 import fr.iutvalence.java.projets.towerdefense.Coordonnees;
 import fr.iutvalence.java.projets.towerdefense.CoordonneesMatriceException;
@@ -8,7 +7,7 @@ import fr.iutvalence.java.projets.towerdefense.Decor;
 import fr.iutvalence.java.projets.towerdefense.Deplacement;
 
 /**
- * Créer une matrice, la remplir et l'afficher à des fins de test + Test des méthodes
+ * Créer une matrice, la remplir et l'afficher à des fins de test
  */
 public class TestMatrice
 {

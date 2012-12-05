@@ -3,7 +3,6 @@ package fr.iutvalence.java.projets.towerdefense;
 /**
  * Une matrice est une carte de jeu, elle est composée d'une taille (hauteur, largeur), d'un chemmin (définissant le
  * chemin que les unités devront suivre) ainsi qu'un background (décor de la carte du jeu)
- * 
  */
 public class Matrice
 {
@@ -18,7 +17,6 @@ public class Matrice
 	 * Hauteur maximale de la matrice de jeu
 	 */
 	public final static int HAUTEUR_MAX = 20;
-	
 
 	/* VARIABLES DE MATRICE ------------------------------ */
 
@@ -38,7 +36,7 @@ public class Matrice
 	private final Chemin chemin;
 
 	/**
-	 * Tableau d'entiers à double dimensions : représente le décor matrice. Contient des des entiers qui représentent le
+	 * Tableau d'entiers à double dimensions : représente le décor matrice. Contient des type Decor qui représentent le
 	 * décor
 	 */
 	private Decor[][] background;
@@ -46,14 +44,10 @@ public class Matrice
 	/**
 	 * Genère une matrice d'une taille, d'un chemin et d'un background donnés
 	 * 
-	 * @param hauteur
-	 *            La hauteur de la matrice
-	 * @param largeur
-	 *            La largeur de la matrice
-	 * @param chemin
-	 *            Le chemin que les unités deveront parcouriri afin de traverser la matrice
-	 * @param background
-	 *            Le décor de la matrice de jeu
+	 * @param hauteur La hauteur de la matrice
+	 * @param largeur La largeur de la matrice
+	 * @param chemin  Le chemin que les unités deveront parcouriri afin de traverser la matrice
+	 * @param background Le décor de la matrice de jeu
 	 */
 	public Matrice(int hauteur, int largeur, Chemin chemin, Decor[][] background)
 	{
@@ -65,19 +59,18 @@ public class Matrice
 	}
 
 	/**
-	 * Renvoie une chaîne qui contient la représentation du background de la matrice en ascii-art
+	 * Redefinition de la méthode toString
 	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
 	{
 		String res = "";
-
+		
 		for (int i = 0; i < this.hauteur; i++)
-		{					// Parcours le premier tableau
+		{// Parcours le premier tableau
 			for (int j = 0; j < this.largeur; j++)
-			{				// Parcours le second tableau
-				
+			{// Parcours le second tableau
 				switch (this.background[i][j])
 				{
 					case MUR : res = res +"M"; break;
@@ -87,7 +80,6 @@ public class Matrice
 					case TOWER : res = res +"O"; break;
 					case UNITE : res = res +"X"; break;
 				}
-				
 				res = res + " ";
 			}
 			res = res + "\n";	// Permet de revenir à la ligne au moment de passer à la ligne suivante du tableau
@@ -98,8 +90,7 @@ public class Matrice
 	/**
 	 * Permet de connaître l'élément de la carte à des coordonnées données
 	 * 
-	 * @param c
-	 *            Un objet de type Coordonnées
+	 * @param c Un objet de type Coordonnées
 	 * @return Un entier représentant l'élément (décor, chemin) aux coordonnées données
 	 * @throws CoordonneesMatriceException Gère les exceptions au niveau des coordonnées des points
 	 */
@@ -113,7 +104,8 @@ public class Matrice
 	}
 
 	/**
-	 * Permet de changer le background à des coordonnées données.
+	 * Permet de changer le background à des coordonnées données
+	 * 
 	 * @param c Coordonnées du point dont le background sera changé
 	 * @param background Nouveau décor 
 	 * @throws CoordonneesMatriceException Gère les exceptions au niveau des coordonnées des points
@@ -158,6 +150,7 @@ public class Matrice
 	}
 	
 	/** Ajoute un élément sur la matrice
+	 * 
 	 * @param element Un élément à placer sur la matrice
 	 * @throws CoordonneesMatriceException
 	 */
@@ -173,6 +166,7 @@ public class Matrice
 	
 	/**
 	 * Supprimer un élément de la matrice
+	 * 
 	 * @param element Une élément que l'on souhaite enlever de la matrice
 	 * @throws CoordonneesMatriceException
 	 */

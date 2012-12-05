@@ -6,12 +6,10 @@ package fr.iutvalence.java.projets.towerdefense;
 public class CoordonneesMatriceException extends Exception
 {
 	/**
-	 * Affiche une erreur
+	 * Erreur due à une coordonnée hors de la matrice
 	 */
 	public CoordonneesMatriceException()
 	{
-		// TODO Pas d'affichage console ici (à discuter)
-		System.out.println("Les coordonnées fournies sont en dehors de la carte !");
-	}
 
+	}
 }

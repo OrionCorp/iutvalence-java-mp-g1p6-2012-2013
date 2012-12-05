@@ -1,5 +1,4 @@
 package fr.iutvalence.java.projets.towerdefense.tests;
-
 import fr.iutvalence.java.projets.towerdefense.Chemin;
 import fr.iutvalence.java.projets.towerdefense.Coordonnees;
 import fr.iutvalence.java.projets.towerdefense.Deplacement;

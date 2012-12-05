@@ -1,7 +1,5 @@
 package fr.iutvalence.java.projets.towerdefense;
 
-import java.util.ArrayList;
-
 /**
  * Permet la definition d'une partie.
  * Pour plus de détails, se référer au <a href="https://github.com/sebastienjean/iutvalence-java-mp-g1p6-2012-2013/wiki">wiki</a>
@@ -56,13 +54,11 @@ public class Partie
 	 * Liste des unités présentes dans la partie
 	 */
 	private Unite[] listeUnite;
-	//private ArrayList<Unite> listeUnite;
 
 	/**
 	 * Liste des Towers présentes dans la partie
 	 */
 	private Tower[] listeTower;
-	//private ArrayList<Tower> listeTower;
 
 	/**
 	 * Matrice utilisée dans la partie
@@ -79,13 +75,11 @@ public class Partie
 	 */
 	private int pvQG;
 
-	
-	//FIXME PERSO Corriger le commentaire
 	/**
 	 * Gère une partie dont les nombres de tours, tower, score et unités sont initialisés à 0
+	 * 
 	 * @param matrice La matrice utilisé dans la partie
 	 * @param pvQG 
-	 * @param arrayListeEmpty 
 	 */
 	public Partie(Matrice matrice, int pvQG)
 	{
@@ -101,7 +95,9 @@ public class Partie
 		this.listeUnite = new Unite[NBMAX_UNITS];
 		this.pvQG = pvQG;
 	}
-	/*
+	/**
+	 * Redéfinition de la méthode toString
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
@@ -111,6 +107,7 @@ public class Partie
 
 	/**
 	 * Démarrer la partie
+	 * 
 	 * @throws ListeUniteException 
 	 */
 	public void demarrer() throws ListeUniteException
@@ -153,12 +150,10 @@ public class Partie
 		}*/
 	}
 
-
 	public int getPvQG()
 	{
 		return pvQG;
 	}
-
 
 	public void setPvQG(int pvQG)
 	{
@@ -167,6 +162,7 @@ public class Partie
 	
 	/**
 	 * Ajouter une unité dans la liste des unités
+	 * 
 	 * @param unite
 	 */
 	public void addUniteListe(Unite unite)
@@ -177,11 +173,11 @@ public class Partie
 	
 	/**
 	 * Ajouter une tower dans la liste des towers
+	 * 
 	 * @param tower
 	 */
 	public void addTowerListe(Tower tower)
 	{
-		//this.listeTower[this.listeTower.length + 1] = tower; 
 		this.listeTower[this.nbTowers] = tower;
 		this.nbTowers += 1;
 	}
@@ -206,6 +202,7 @@ public class Partie
 	
 	/**
 	 * Parcours la liste des unités afin d'éffectuer toute les actions possibles
+	 * 
 	 * @throws CoordonneesMatriceException 
 	 */
 	public void parcoursListeUnites() throws CoordonneesMatriceException
@@ -219,6 +216,7 @@ public class Partie
 				this.listeUnite[this.nbUnites] = null;
 				this.nbUnites = this.nbUnites - 1;
 			}
+			
 			//Placer ou avancer
 			if (this.matrice.getBackgroundAt(this.listeUnite[i].getPos()) == Decor.QG)
 			{
@@ -263,19 +261,32 @@ public class Partie
 			//Ajouter le nombre de tours ou le score			
 		}
 	}
+	
+	/**
+	 * Obtenir le nombre d'unités en utilisation
+	 * 
+	 * @return
+	 */
 	public int getNbUnites()
 	{
 		return this.nbUnites;
 	}
+	/**
+	 * Obntenir le nombre de towers posées
+	 * 
+	 * @return
+	 */
 	public int getNbTowers()
 	{
 		return this.nbTowers;
 	}
+	/**
+	 * Obtenir le nombre de tours écoulés
+	 * 
+	 * @return
+	 */
 	public int getNbTours()
 	{
 		return this.nbTours;
 	}
-	
-	
 }
-

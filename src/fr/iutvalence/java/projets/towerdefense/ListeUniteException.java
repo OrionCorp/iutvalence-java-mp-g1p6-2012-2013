@@ -6,11 +6,10 @@ package fr.iutvalence.java.projets.towerdefense;
 public class ListeUniteException extends Exception
 {
 	/**
-	 * Affiche une erreur
+	 * Erreur liée à une liste d'unités vide
 	 */
 	public ListeUniteException()
 	{
-		// TODO Pas d'affichage console ici (à discuter)
-		System.out.println("Il n'y a pas d'unité sur laquelle tirer !");
+
 	}
 }

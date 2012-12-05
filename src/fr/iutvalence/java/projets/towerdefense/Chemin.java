@@ -1,7 +1,4 @@
-
-
 package fr.iutvalence.java.projets.towerdefense;
-
 import java.util.Arrays;
 
 /**
@@ -9,8 +6,6 @@ import java.util.Arrays;
  */
 public class Chemin
 {
-	/* CONSTANTES DE DEPLACEMENT ------------------------------ */
-
 	/**
 	 * Coordonnées de départ du chemin
 	 */
@@ -21,7 +16,6 @@ public class Chemin
 	 */
 	private final Deplacement[] tabDeplacements;
 	
-	
 	/**
 	 * Entier permettant de connaître son avancement sur le chemin de la matrice
 	 */
@@ -29,8 +23,9 @@ public class Chemin
 
 	/**
 	 * Permet de créer un chemin contenant le point de départ des unités ainsi que les déplacements à effectuer
-	 * @param coorDepart Permet de définir le point de départ des unités (Coordonnees)
-	 * @param tabDeplacements Permet de définir les déplacements à effectuer (int[])
+	 * 
+	 * @param coorDepart Permet de définir le point de départ des unités
+	 * @param tabDeplacements Permet de définir les déplacements à effectuer
 	 */
 	public Chemin(Coordonnees coorDepart, Deplacement[] tabDeplacements)
 	{
@@ -41,29 +36,18 @@ public class Chemin
 	}
 
 	/**
-	 * @return
+	 * Obtenir le tableau des déplacements de la matrice
+	 * 
+	 * @return Tableau des déplacements  
 	 */
 	public Deplacement[] getTabDeplacements()
 	{
 		return this.tabDeplacements;
 	}
 
-	// TODO A compléter
 	/**
-	 * Renvoie les coordonnées successives que les unités deveront suivre afin de traverser la matrice
+	 * Redéfinition de la méthode toString. Coordonnées de départ et tableau des déplacements
 	 * 
-	 * @return Un tableau contenant toutes les coordonnées
-	 */
-	public Coordonnees[] coordonneesChemin()
-	{
-
-		Coordonnees[] res = {};
-
-		return res;
-	}
-
-	/**
-	 * Renvoie une chaîne contenant les coordonnées du point de départ et le tableau des déplacements
 	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
@@ -71,14 +55,23 @@ public class Chemin
 		return "Coodonnées de départ = " + this.coorDepart + ", Tableau des déplacements = " + Arrays.toString(this.tabDeplacements);
 	}
 
+	/**
+	 * Obtenir l'indice de déplacement
+	 * 
+	 * @return Indice de déplacement
+	 */
 	public int getIndiceDeplacement()
 	{
 		return this.indiceDeplacement;
 	}
 
+	/**
+	 * Modifie l'indice de déplacement
+	 * 
+	 * @param indiceDeplacement
+	 */
 	public void setIndiceDeplacement(int indiceDeplacement)
 	{
 		this.indiceDeplacement = indiceDeplacement;
 	}
-
 }

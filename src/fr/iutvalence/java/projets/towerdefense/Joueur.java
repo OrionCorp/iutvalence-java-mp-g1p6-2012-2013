@@ -3,18 +3,12 @@ package fr.iutvalence.java.projets.towerdefense;
 /**
  * Gère les joueurs
  */
-
 public class Joueur
 {
-
-	/* CONSTANTES --------------------------------------- */
-
 	/**
 	 * Nom par défaut attribué au joueur
 	 */
 	private final static String NOM_JOUEUR_DEFAUT = "Joueur";
-
-	/* VARIABLES DE JOUEUR ------------------------------ */
 
 	/**
 	 * Pseudonyme du joueur
@@ -22,12 +16,12 @@ public class Joueur
 	private final String nomJoueur; 
 
 	/**
-	 * High score du joueur //TODO (à la fin) Penser à gérer le high score à l'aide d'une base de données
+	 * High score du joueur
 	 */
 	private int highScore;
 
 	/**
-	 * Gère un joueur dont le nom et le High-score sont initialisés par defaut
+	 * Créer un joueur par defaut
 	 */
 	public Joueur()
 	{
@@ -35,9 +29,22 @@ public class Joueur
 		this.nomJoueur = NOM_JOUEUR_DEFAUT;
 		this.highScore = 0;
 	}
+	
+	/**
+	 * Créer un joueur dont le nom est passé en paramètre
+	 * 
+	 * @param nomJoueur 
+	 */
+	public Joueur(String nomJoueur)
+	{
+		super();
+		this.nomJoueur = nomJoueur;
+		this.highScore = 0;
+	}
 
 	/**
-	 * Obtenir le hight score du joueur	 * 
+	 * Obtenir le hight score du joueur
+	 *  
 	 * @return Le high score du joueur courant
 	 */
 	public int getHighScore()
@@ -47,6 +54,7 @@ public class Joueur
 
 	/**
 	 * Obtenir le nom du joueur
+	 * 
 	 * @return Le nom du joueur courant
 	 */
 	public String getNomJoueur()
@@ -55,7 +63,7 @@ public class Joueur
 	}
 
 	/**
-	 * Renvoie le nom du joueur ainsi que son high score sous la forme d'une chaîne de caractères
+	 * Redefinition de la méthode toString
 	 */
 	public String toString()
 	{

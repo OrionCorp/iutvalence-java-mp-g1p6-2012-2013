@@ -1,9 +1,8 @@
 package fr.iutvalence.java.projets.towerdefense;
 
 /**
- * Permet de manipuler toutes les tours du jeu
+ * Permet de manipuler toutes les towers du jeu
  */
-
 public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 {
 	/**
@@ -31,6 +30,7 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 	
 	/**
 	 * Créer une tower avec des caractéristiques données
+	 * 
 	 * @param pointsAttaque Points d'attaque de la tower
 	 * @param porteeAttaque Portée de l'attaque de la tower
 	 * @param tempsRechargement Le temps de rechargement de la Tower
@@ -47,6 +47,7 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 
 	/**
 	 * Obtenir l'entier représentant l'autorisation de tir 
+	 * 
 	 * @return Entier représentant l'autorisation de tir 
 	 */
 	public int getAutorisationTir()
@@ -56,6 +57,7 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 
 	/**
 	 * Changer l'entier représentant l'autorisation de tir 
+	 * 
 	 * @param autorisationTir Entier représentant l'autorisation de tir 
 	 */
 	public void setAutorisationTir(final int autorisationTir)
@@ -63,7 +65,9 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 		this.autorisationTir = autorisationTir;
 	}
 
-	/*
+	/**
+	 * Redéfinition de la méthode toString
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
@@ -81,10 +85,11 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 	}
 	
 	/**
-	 * Obtenir la valeur absolue de la distance entre l'unité d'un tableau et la tower.
+	 * Obtenir la valeur absolue de la distance entre l'unité d'un tableau et la tower
+	 * 
 	 * @param tabUnite Un tableau d'unité
 	 * @param i Un entier
-	 * @return La valeur absolue de la distance entre l'unité d'un tableau et la tower.
+	 * @return La valeur absolue de la distance entre l'unité d'un tableau et la tower
 	 */
 	public int distanceTowerUnite (Unite[] tabUnite, int i)
 	{
@@ -92,9 +97,9 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 		Math.abs( this.getPos().getY() - tabUnite[i].getPos().getY() );
 	}
 	
-	//TODO Commentaires 
 	/**
-	 * Obtenir l'unité la plus proche de notre Tower.
+	 * Obtenir l'unité la plus proche de notre Tower
+	 * 
 	 * @param tabUnite Le tableau des unités présentes sur la matrice
 	 * @return L'unité la plus proche de notre Tower
 	 * @throws ListeUniteException 
@@ -105,8 +110,6 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 		{
 			throw new ListeUniteException();
 		}
-		
-		//
 		Unite uniteRes = new Unite(-1, -1, new Coordonnees(-1,-1));
 		
 		for (int i = 0; tabUnite[i] != null; i++)
@@ -125,12 +128,10 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 					}
 					j++;
 				}
-				
 			}
 			
 			else if (X + Y < this.porteeAttaque) // Gère les lignes droites
 			{
-				//Dans le champs
 				int j = 0;
 				while (j <= tabUnite.length)
 				{
@@ -142,12 +143,12 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 				}
 			}
 		}
-		
 		return uniteRes;
 	}
 	
 	/**
 	 * Tire sur l'unité la plus proche si elle existe, ne fait rien sinon
+	 * 
 	 * @param tabUnite Unité attaquée !
 	 * @return True si tiré, false si pas tiré.
 	 * @throws ListeUniteException 
@@ -160,7 +161,6 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 			unite.setPointsVie(unite.getPointsVie()-this.pointsAttaque);
 			if (unite.mort() == true){
 				//TODO Lancer la supression de l'unité
-				
 			}
 			// Reinitialise le temps de rechargement
 			this.setAutorisationTir(this.tempsRechargement); 

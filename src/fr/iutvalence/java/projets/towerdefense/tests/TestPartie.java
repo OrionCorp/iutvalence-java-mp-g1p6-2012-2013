@@ -6,7 +6,6 @@ import fr.iutvalence.java.projets.towerdefense.*;
  */
 public class TestPartie
 {
-
 	/**
 	 * @param args
 	 * @throws CoordonneesMatriceException 
@@ -14,47 +13,6 @@ public class TestPartie
 	 */
 	public static void main(String[] args) throws CoordonneesMatriceException, ListeUniteException
 	{
-		/*
-		Coordonnees pointDepart = new Coordonnees(4, 0);
-		Deplacement[] parcours = new Deplacement[]
-			{ Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE,
-					Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE };
-		Chemin chemin = new Chemin(pointDepart, parcours);
-		Decor[][] background = new Decor[][]
-			//@formatter:off
-			{
-						{ Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE },
-						{ Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE },
-						{ Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE },
-						{ Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE,	Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE },
-						{ Decor.ROUTE, Decor.ROUTE, Decor.ROUTE, Decor.ROUTE, Decor.ROUTE, Decor.ROUTE,	Decor.ROUTE, Decor.ROUTE, Decor.ROUTE, Decor.ROUTE },
-						{ Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE,	Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE },
-						{ Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE,	Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE },
-						{ Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE,	Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE },
-						{ Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE,	Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE }, 
-			};
-		//@formatter:on
-		Matrice matriceCourante = new Matrice(9, 10, chemin, background);
-		
-		Partie partieCourante = new Partie(matriceCourante, 50);
-		partieCourante.demarrer();
-		
-		Tower tower1 = new Tower(5,5,2, new Coordonnees(5,5));
-		Unite unite1 = new Unite();
-		partieCourante.addUniteListe(unite1);
-		
-		matriceCourante.placerElement(tower1);
-		matriceCourante.placerElement(unite1);
-		
-		System.out.println("\n");
-		System.out.println(matriceCourante);
-		
-		*/
-		
-		//TODO : Finir le test
-		
-		//TEST PROPRE D'UNE VRAIE PATIE
-		
 		Coordonnees pointDepart = new Coordonnees(4, 0);
 		Deplacement[] parcours = new Deplacement[]
 			{ Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE,
@@ -83,7 +41,7 @@ public class TestPartie
 		partieTest1.addTowerListe(new Tower(5,5,2, new Coordonnees(1,6)));
 		partieTest1.addUniteListe(new Unite());
 		
-		for(int i = 0; i < 10; i++)
+		for(int i = 0; i < 10; i++) //Fait tourner 10 tours de jeu
 		{
 			partieTest1.jouerTour();
 			System.out.println(partieTest1.getNbTours());

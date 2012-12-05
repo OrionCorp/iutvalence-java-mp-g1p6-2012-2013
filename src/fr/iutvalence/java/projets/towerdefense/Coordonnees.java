@@ -49,10 +49,7 @@ public class Coordonnees
 	}
 
 	/**
-	 * Renvoie une chaine de caractères correspondant à la position de l'objet La chaine est composé de l'abscisse et de
-	 * l'ordonnée (des entiers)
-	 * 
-	 * @return (<i>abscisse</i>, <i>ordonnée</i>)
+	 * Redéfinition de la méthode toString. La chaine est composé de l'abscisse et de l'ordonnée
 	 */
 	public String toString()
 	{
@@ -60,6 +57,8 @@ public class Coordonnees
 	}
 
 	/**
+	 * Redéfinition de hashCode
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	public int hashCode()
@@ -70,12 +69,12 @@ public class Coordonnees
 		result = prime * result + this.y;
 		return result;
 	}
-
 	
 	/**
-	 *
+	 * Redefinition de equals
 	 * On considère que deux coordonnées sont égales si les abscisses et les ordonnées de ces
 	 * coordonnées sont les mêmes
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	public boolean equals(Object obj)
