@@ -6,7 +6,7 @@ import fr.iutvalence.java.projets.towerdefense.*;
  * chemin que les unités devront suivre) ainsi qu'un background (décor de la carte du jeu)
  * 
  */
-public abstract class Matrice implements Affichage
+public abstract class MatriceInterface implements Affichage
 {
 	/* CONSTANTES --------------------------------------- */
 
@@ -56,7 +56,7 @@ public abstract class Matrice implements Affichage
 	 * @param background
 	 *            Le décor de la matrice de jeu
 	 */
-	public Matrice(int hauteur, int largeur, Chemin chemin, Decor[][] background)
+	public MatriceInterface(int hauteur, int largeur, Chemin chemin, Decor[][] background)
 	{
 		super();
 		this.largeur = largeur;
@@ -185,5 +185,31 @@ public abstract class Matrice implements Affichage
 		else{
 			this.setBackgroundAt(element.getPos(), Decor.ROUTE);
 		}
+	}
+	
+	public void Afficher()
+	{
+		String res = "";
+
+		for (int i = 0; i < this.hauteur; i++)
+		{					// Parcours le premier tableau
+			for (int j = 0; j < this.largeur; j++)
+			{				// Parcours le second tableau
+				
+				switch (this.background[i][j])
+				{
+					case MUR : res = res +"M"; break;
+					case HERBE : res = res +"H"; break;
+					case ROUTE : res = res +"R"; break;
+					case TERRE : res = res +"T"; break;
+					case TOWER : res = res +"O"; break;
+					case UNITE : res = res +"X"; break;
+				}
+				
+				res = res + " ";
+			}
+			res = res + "\n";	// Permet de revenir à la ligne au moment de passer à la ligne suivante du tableau
+		}
+		System.out.print(res);
 	}
 }
