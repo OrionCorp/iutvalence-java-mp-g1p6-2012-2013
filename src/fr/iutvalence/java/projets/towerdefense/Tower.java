@@ -160,7 +160,6 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 			// Tire sur l'ennemi le plus près
 			unite.setPointsVie(unite.getPointsVie()-this.pointsAttaque);
 			if (unite.mort() == true){
-				//TODO Lancer la supression de l'unité
 			}
 			// Reinitialise le temps de rechargement
 			this.setAutorisationTir(this.tempsRechargement); 

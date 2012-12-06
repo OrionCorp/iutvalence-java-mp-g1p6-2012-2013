@@ -83,7 +83,6 @@ public class Partie
 	 */
 	public Partie(Matrice matrice, int pvQG)
 	{
-		// FIXME (FIXED) tous les attributs doivent être initialisés !
 		super();
 		this.nbTours = 0;
 		this.nbTowers = 0;
@@ -112,42 +111,8 @@ public class Partie
 	 */
 	public void demarrer() throws ListeUniteException
 	{
+		//Démarrer la partie
 		System.out.print(this.matrice);
-		// TODO A FINIR RAPIDEMENT ! Pour plus de détails, se référer au <a href="https://github.com/sebastienjean/iutvalence-java-mp-g1p6-2012-2013/wiki/Fonctionnement-du-jeu">Fonctionnement</a>
-		
-		// Parcours de la liste des towers, et tirs
-		/*for (int i = 0; i < this.listeTower.length; i++)
-		{
-			this.listeTower[i].tirer(this.listeUnite);
-		}*/
-		
-		// Suppression des unités mortes
-		// A deplacer 
-		/*for (int i = 0; i < this.listeUnite.length; i++)
-		{
-			if (this.listeUnite[i].mort())
-			{
-				// Suppression de l'unité morte
-				this.listeUnite[i] = this.listeUnite[this.listeUnite.length];
-				this.listeUnite[this.listeUnite.length] = null;
-			}
-		}*/
-		
-		// Déplacement des unités
-		/*for (int i = 0; i < this.listeUnite.length; i++)
-		{
-			// Cas où une unité va sortir de la matrice et entrer dans le QG
-				this.listeUnite[i].deplacerUnite(this.matrice);
-		}*/
-		
-		// Cas où l'unité entre dans la QG
-		/*for (int i = 0; i < this.listeUnite.length; i++)
-		{
-			if (this.listeUnite[i].getPos() == FIN_CHEMIN)
-			{
-				this.setPvQG(this.getPvQG() - this.listeUnite[i].getPointsAttaque());
-			}
-		}*/
 	}
 
 	public int getPvQG()
