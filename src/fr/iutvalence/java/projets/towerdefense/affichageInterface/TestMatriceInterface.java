@@ -69,9 +69,8 @@ public class TestMatriceInterface
 						{ Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE,	Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE }, 
 			};
 		//@formatter:on
-		Affichage a = new Affichage();
 		MatriceInterface carte = new MatriceInterface(9, 10, chemin, background);
-
+		// Affichage de la matrice
 		carte.Afficher();
 	}
 }

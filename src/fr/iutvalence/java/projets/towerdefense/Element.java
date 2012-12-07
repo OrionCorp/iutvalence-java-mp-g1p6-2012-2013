@@ -1,7 +1,7 @@
 package fr.iutvalence.java.projets.towerdefense;
 
 /**
- * Permet de gérer les éléments
+ * Permet de gérer les éléments du jeu.
  * Les classes Tower et Unité héritent de cette classe
  */
 public class Element
@@ -17,9 +17,8 @@ public class Element
 	private Type type;
 	
 	/**
-	 * Modifie la position de l'élément
-	 * 
-	 * @param pos
+	 * Modifier la position de l'élément
+	 * @param pos Position de l'évènement
 	 */
 	public void setPos(Coordonnees pos)
 	{
@@ -28,7 +27,6 @@ public class Element
 
 	/**
 	 * Obtenir la position de l'élément
-	 * 
 	 * @return Les coordonnées de l'élément
 	 */
 	public Coordonnees getPos()
@@ -38,7 +36,6 @@ public class Element
 
 	/**
 	 * Obtenir le type de l'élément
-	 * 
 	 * @return Le type de l'élément
 	 */
 	public Type getType()
@@ -48,7 +45,6 @@ public class Element
 
 	/**
 	 * Constructeur d'un élément
-	 * 
 	 * @param pos Position de l'élément
 	 * @param type Type de l'élément
 	 */

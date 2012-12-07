@@ -17,7 +17,6 @@ public class Coordonnees
 
 	/**
 	 * Permet de définir un objet "Coordonnees" composé de deux entiers donnée en paramètres
-	 * 
 	 * @param x Abscisse de la coordonnée
 	 * @param y Ordonnée de la coordonnée
 	 */
@@ -29,8 +28,7 @@ public class Coordonnees
 	}
 
 	/**
-	 * Renvoie l'abscisse
-	 * 
+	 * Obtenir l'abscisse
 	 * @return L'abscisse
 	 */
 	public int getX()
@@ -39,7 +37,7 @@ public class Coordonnees
 	}
 
 	/**
-	 * Renvoie l'ordonée
+	 * Obtenir l'ordonée
 	 * 
 	 * @return L'ordonnée
 	 */
@@ -49,7 +47,8 @@ public class Coordonnees
 	}
 
 	/**
-	 * Redéfinition de la méthode toString. La chaine est composé de l'abscisse et de l'ordonnée
+	 * Redéfinition de la méthode toString. 
+	 * Affichel'abscisse et l'ordonnée
 	 */
 	public String toString()
 	{
@@ -58,7 +57,6 @@ public class Coordonnees
 
 	/**
 	 * Redéfinition de hashCode
-	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	public int hashCode()
@@ -74,7 +72,6 @@ public class Coordonnees
 	 * Redefinition de equals
 	 * On considère que deux coordonnées sont égales si les abscisses et les ordonnées de ces
 	 * coordonnées sont les mêmes
-	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	public boolean equals(Object obj)

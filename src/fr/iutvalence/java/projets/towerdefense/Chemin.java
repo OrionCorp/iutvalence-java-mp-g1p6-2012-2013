@@ -37,7 +37,6 @@ public class Chemin
 
 	/**
 	 * Obtenir le tableau des déplacements de la matrice
-	 * 
 	 * @return Tableau des déplacements  
 	 */
 	public Deplacement[] getTabDeplacements()
@@ -46,8 +45,8 @@ public class Chemin
 	}
 
 	/**
-	 * Redéfinition de la méthode toString. Coordonnées de départ et tableau des déplacements
-	 * 
+	 * Redéfinition de la méthode toString. 
+	 * Affiche les coordonnées de départ du Chemùin et le tableau des déplacements
 	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
@@ -57,7 +56,6 @@ public class Chemin
 
 	/**
 	 * Obtenir l'indice de déplacement
-	 * 
 	 * @return Indice de déplacement
 	 */
 	public int getIndiceDeplacement()
@@ -66,9 +64,8 @@ public class Chemin
 	}
 
 	/**
-	 * Modifie l'indice de déplacement
-	 * 
-	 * @param indiceDeplacement
+	 * Modifier l'indice de déplacement
+	 * @param indiceDeplacement Entier représentant son avancement sur le chemin de la matrice
 	 */
 	public void setIndiceDeplacement(int indiceDeplacement)
 	{

@@ -32,8 +32,7 @@ public class Joueur
 	
 	/**
 	 * Créer un joueur dont le nom est passé en paramètre
-	 * 
-	 * @param nomJoueur 
+	 * @param nomJoueur Le nom du joueur
 	 */
 	public Joueur(String nomJoueur)
 	{
@@ -43,8 +42,7 @@ public class Joueur
 	}
 
 	/**
-	 * Obtenir le hight score du joueur
-	 *  
+	 * Obtenir le hight score du joueur 
 	 * @return Le high score du joueur courant
 	 */
 	public int getHighScore()
@@ -54,7 +52,6 @@ public class Joueur
 
 	/**
 	 * Obtenir le nom du joueur
-	 * 
 	 * @return Le nom du joueur courant
 	 */
 	public String getNomJoueur()
@@ -63,7 +60,8 @@ public class Joueur
 	}
 
 	/**
-	 * Redefinition de la méthode toString
+	 * Redefinition de la méthode toString.
+	 * Affiche le nom du joueur ainsi que son High score
 	 */
 	public String toString()
 	{

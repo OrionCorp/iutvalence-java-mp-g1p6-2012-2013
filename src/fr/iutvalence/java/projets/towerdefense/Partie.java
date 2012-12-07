@@ -76,10 +76,9 @@ public class Partie
 	private int pvQG;
 
 	/**
-	 * Gère une partie dont les nombres de tours, tower, score et unités sont initialisés à 0
-	 * 
+	 * Créer une partie dont les nombres de tours, tower, score et unités sont initialisés à 0
 	 * @param matrice La matrice utilisé dans la partie
-	 * @param pvQG 
+	 * @param pvQG Nombre de points de vie du QG
 	 */
 	public Partie(Matrice matrice, int pvQG)
 	{
@@ -95,19 +94,18 @@ public class Partie
 		this.pvQG = pvQG;
 	}
 	/**
-	 * Redéfinition de la méthode toString
-	 * 
+	 * Redéfinition de la méthode toString.
+	 * Affiche le nombre de tours, d'unités, de towers, et le score de la partie
 	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
 	{
-		return "Partie - nbTours = " + this.nbTours + ", nbUnites = " + this.nbUnites + ", nbTowers = " + this.nbTowers + ", score = " + this.score;
+		return "Partie - Nombre de tours = " + this.nbTours + ", Nombre d'unites = " + this.nbUnites + ", Nombre de Towers = " + this.nbTowers + ", score = " + this.score;
 	}
 
 	/**
 	 * Démarrer la partie
-	 * 
-	 * @throws ListeUniteException 
+	 * @throws ListeUniteException Gérer une exception au niveau de la liste des unités
 	 */
 	public void demarrer() throws ListeUniteException
 	{
@@ -115,11 +113,18 @@ public class Partie
 		System.out.print(this.matrice);
 	}
 
+	/**
+	 * Obtenir les points de vie du QG
+	 * @return Les points de vie du QG
+	 */
 	public int getPvQG()
 	{
-		return pvQG;
+		return this.pvQG;
 	}
 
+	/** Modifier les points de vie du QG
+	 * @param pvQG Les points de vie du QG
+	 */
 	public void setPvQG(int pvQG)
 	{
 		this.pvQG = pvQG;
@@ -127,8 +132,7 @@ public class Partie
 	
 	/**
 	 * Ajouter une unité dans la liste des unités
-	 * 
-	 * @param unite
+	 * @param unite Une unité
 	 */
 	public void addUniteListe(Unite unite)
 	{
@@ -138,8 +142,7 @@ public class Partie
 	
 	/**
 	 * Ajouter une tower dans la liste des towers
-	 * 
-	 * @param tower
+	 * @param tower Une Tower
 	 */
 	public void addTowerListe(Tower tower)
 	{
@@ -148,10 +151,9 @@ public class Partie
 	}
 	
 	/**
-	 * Parcours la liste des unités afin d'éffectuer toute les actions possibles
-	 * 
-	 * @throws CoordonneesMatriceException
-	 * @throws ListeUniteException
+	 * Parcourir la liste des unités afin d'effectuer toute les actions possibles
+	 * @throws CoordonneesMatriceException Gérer une exception au niveau des coordonnées de la matrice
+	 * @throws ListeUniteException Gérer une exception au niveau de la liste des unités
 	 */
 	public void parcoursListeTowers() throws CoordonneesMatriceException, ListeUniteException
 	{
@@ -166,9 +168,8 @@ public class Partie
 	}
 	
 	/**
-	 * Parcours la liste des unités afin d'éffectuer toute les actions possibles
-	 * 
-	 * @throws CoordonneesMatriceException 
+	 * Parcourir la liste des unités afin d'éffectuer toute les actions possibles
+	 * @throws CoordonneesMatriceException Gérer une exception au niveau des coordonnées de la matrice
 	 */
 	public void parcoursListeUnites() throws CoordonneesMatriceException
 	{
@@ -182,7 +183,7 @@ public class Partie
 				this.nbUnites = this.nbUnites - 1;
 			}
 			
-			//Placer ou avancer
+			// Placer ou avancer
 			if (this.matrice.getBackgroundAt(this.listeUnite[i].getPos()) == Decor.QG)
 			{
 				this.setPvQG(this.getPvQG() - this.listeUnite[i].getPointsAttaque());
@@ -192,17 +193,16 @@ public class Partie
 	}
 	
 	/**
-	 * Permet de gérer un tour de jeu
-	 * Parcours les tableau d'éléments
-	 * 
-	 * @throws CoordonneesMatriceException
-	 * @throws ListeUniteException
+	 * Gérer un tour de jeu (parcours des tableaux d'éléments)
+	 * @throws CoordonneesMatriceException Gérer une exception au niveau des coordonnées de la matrice
+	 * @throws ListeUniteException Gérer une exception au niveau de la liste des unités
 	 */
 	public void jouerTour() throws CoordonneesMatriceException, ListeUniteException
 	{
 		parcoursListeTowers();
 		parcoursListeUnites();
 		
+		// Cas de fin de partie
 		if (this.getPvQG() <= 0)
 		{
 			this.finPartie();
@@ -211,7 +211,7 @@ public class Partie
 	}
 	
 	/**
-	 * Gère la fin de partie
+	 * Gérer la fin de partie
 	 */
 	public void finPartie()
 	{
@@ -228,18 +228,16 @@ public class Partie
 	}
 	
 	/**
-	 * Obtenir le nombre d'unités en utilisation
-	 * 
-	 * @return
+	 * Obtenir le nombre d'unités en utilisation 
+	 * @return Le nombre d'unités
 	 */
 	public int getNbUnites()
 	{
 		return this.nbUnites;
 	}
 	/**
-	 * Obntenir le nombre de towers posées
-	 * 
-	 * @return
+	 * Obtenir le nombre de towers posées
+	 * @return Le nombre de Towers
 	 */
 	public int getNbTowers()
 	{
@@ -247,8 +245,7 @@ public class Partie
 	}
 	/**
 	 * Obtenir le nombre de tours écoulés
-	 * 
-	 * @return
+	 * @return Le nombre de tours
 	 */
 	public int getNbTours()
 	{

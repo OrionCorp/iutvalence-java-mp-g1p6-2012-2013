@@ -6,7 +6,7 @@ import fr.iutvalence.java.projets.towerdefense.*;
  * chemin que les unités devront suivre) ainsi qu'un background (décor de la carte du jeu)
  * 
  */
-public abstract class MatriceInterface implements Affichage
+public class MatriceInterface implements Affichage
 {
 	/* CONSTANTES --------------------------------------- */
 

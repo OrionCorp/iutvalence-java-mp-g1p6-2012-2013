@@ -42,7 +42,7 @@ public class Matrice
 	private Decor[][] background;
 
 	/**
-	 * Genère une matrice d'une taille, d'un chemin et d'un background donnés
+	 * Genérer une matrice d'une taille, d'un chemin et d'un background donnés
 	 * 
 	 * @param hauteur La hauteur de la matrice
 	 * @param largeur La largeur de la matrice
@@ -59,8 +59,8 @@ public class Matrice
 	}
 
 	/**
-	 * Redefinition de la méthode toString
-	 * 
+	 * Redefinition de la méthode toString.
+	 * Permet l'affichage de la matrice.
 	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
@@ -79,6 +79,7 @@ public class Matrice
 					case TERRE : res = res +"T"; break;
 					case TOWER : res = res +"O"; break;
 					case UNITE : res = res +"X"; break;
+					case QG : res = res + "G"; break;
 				}
 				res = res + " ";
 			}
@@ -89,7 +90,6 @@ public class Matrice
 
 	/**
 	 * Permet de connaître l'élément de la carte à des coordonnées données
-	 * 
 	 * @param c Un objet de type Coordonnées
 	 * @return Un entier représentant l'élément (décor, chemin) aux coordonnées données
 	 * @throws CoordonneesMatriceException Gère les exceptions au niveau des coordonnées des points
@@ -105,7 +105,6 @@ public class Matrice
 
 	/**
 	 * Permet de changer le background à des coordonnées données
-	 * 
 	 * @param c Coordonnées du point dont le background sera changé
 	 * @param background Nouveau décor 
 	 * @throws CoordonneesMatriceException Gère les exceptions au niveau des coordonnées des points
@@ -120,8 +119,7 @@ public class Matrice
 	}
 	
 	/**
-	 * Permet d'obtenir la largeur de la carte
-	 * 
+	 * Obtenir la largeur de la carte
 	 * @return Entier représentant la largeur de la carte
 	 */
 	public int getLargeur()
@@ -130,8 +128,7 @@ public class Matrice
 	}
 
 	/**
-	 * Permet d'obtenir la hauteur de la carte
-	 * 
+	 * Obtenir la hauteur de la carte
 	 * @return Entier représentant la hauteur de la carte
 	 */
 	public int getHauteur()
@@ -140,8 +137,7 @@ public class Matrice
 	}
 
 	/**
-	 * Permet d'obtneir le chemin parcouru par les unités
-	 * 
+	 * Obtenir le chemin parcouru par les unités
 	 * @return Le chemin qui sera parcouru par les unités
 	 */
 	public Chemin getChemin()
@@ -149,10 +145,9 @@ public class Matrice
 		return this.chemin;
 	}
 	
-	/** Ajoute un élément sur la matrice
-	 * 
+	/** Ajouter un élément sur la matrice 
 	 * @param element Un élément à placer sur la matrice
-	 * @throws CoordonneesMatriceException
+	 * @throws CoordonneesMatriceException Gère les exceptions au niveau des coordonnées des points
 	 */
 	public void placerElement(Element element) throws CoordonneesMatriceException{
 		
@@ -166,9 +161,8 @@ public class Matrice
 	
 	/**
 	 * Supprimer un élément de la matrice
-	 * 
 	 * @param element Une élément que l'on souhaite enlever de la matrice
-	 * @throws CoordonneesMatriceException
+	 * @throws CoordonneesMatriceException Gère les exceptions au niveau des coordonnées des points
 	 */
 	public void enleverElement(Element element) throws CoordonneesMatriceException{
 		
