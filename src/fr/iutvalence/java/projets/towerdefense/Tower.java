@@ -102,7 +102,7 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 	 * 
 	 * @param tabUnite Le tableau des unités présentes sur la matrice
 	 * @return L'unité la plus proche de notre Tower
-	 * @throws ListeUniteException 
+	 * @throws ListeUniteException Gérer une exception au niveau de la liste des unités
 	 */
 	public Unite closerEnemy(Unite[] tabUnite) throws ListeUniteException
 	{
@@ -148,12 +148,11 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 	
 	/**
 	 * Tire sur l'unité la plus proche si elle existe, ne fait rien sinon
-	 * 
 	 * @param tabUnite Unité attaquée !
 	 * @return True si tiré, false si pas tiré.
-	 * @throws ListeUniteException 
+	 * @throws ListeUniteException Gérer une exception au niveau de la liste des unités
 	 */
-	public boolean tirer(Unite[] tabUnite) throws ListeUniteException{
+	public boolean tirer(Unite[] tabUnite) throws ListeUniteException {
 		// On vérifie que la Tower peut tirer
 		if (this.autorisationTir == 0){
 			Unite unite = this.closerEnemy(tabUnite);
@@ -161,7 +160,7 @@ public class Tower extends fr.iutvalence.java.projets.towerdefense.Element
 			unite.setPointsVie(unite.getPointsVie()-this.pointsAttaque);
 			if (unite.mort() == true){
 			}
-			// Reinitialise le temps de rechargement
+			// Réinitialise le temps de rechargement
 			this.setAutorisationTir(this.tempsRechargement); 
 			return true;
 		}

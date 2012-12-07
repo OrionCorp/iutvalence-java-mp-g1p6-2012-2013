@@ -7,7 +7,8 @@ import fr.iutvalence.java.projets.towerdefense.Decor;
 import fr.iutvalence.java.projets.towerdefense.Deplacement;
 
 /**
- * Créer une matrice, la remplir et l'afficher à des fins de test
+ * Test de la classe Matrice
+ * Créer une matrice, la remplir et l'afficher
  */
 public class TestMatrice
 {

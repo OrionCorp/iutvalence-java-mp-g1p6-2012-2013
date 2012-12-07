@@ -2,10 +2,15 @@ package fr.iutvalence.java.projets.towerdefense.tests;
 import fr.iutvalence.java.projets.towerdefense.*;
 
 /**
- * Créer une unité et test la méthode ToString de la classe Unite
+ * Test de la classe Unite.
+ * Créer une unité et tester la méthode toString
  */
 public class TestUnite
 {
+	/**
+	 * Procédure de test de la classe Unite
+	 * @param args Arguments passés en paramètres (aucun ici)
+	 */
 	public static void main(String[] args)
 	{
 		Coordonnees position = new Coordonnees(4,0);

@@ -66,11 +66,6 @@ public class Partie
 	public Matrice matrice;
 	
 	/**
-	 * Copie de la matrice utilisée dans la partie (Ne doit pas être altérée)
-	 */
-	private Matrice matriceOriginale;
-	
-	/**
 	 * Nombre de points de vide de la base
 	 */
 	private int pvQG;
@@ -88,7 +83,6 @@ public class Partie
 		this.nbUnites = 0;
 		this.score = 0;
 		this.matrice = matrice;
-		this.matriceOriginale = matrice;
 		this.listeTower = new Tower[NBMAX_TOWERS];
 		this.listeUnite = new Unite[NBMAX_UNITS];
 		this.pvQG = pvQG;

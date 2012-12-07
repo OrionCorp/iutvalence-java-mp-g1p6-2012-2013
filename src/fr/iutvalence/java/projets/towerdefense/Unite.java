@@ -1,7 +1,7 @@
 package fr.iutvalence.java.projets.towerdefense;
 
 /**
- * Permet de gérer les untiés, hérité de Element
+ * Permet de gérer les untiés, hérité de Element.
  * Une unité est caractérisée par des points de vie, d'attaque, et une position sur la carte 
  */
 public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
@@ -47,7 +47,6 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 	
 	/**
 	 * Créer une unité dont on définit les différentes caractéristiques
-	 * 
 	 * @param pv Points de vie de l'unité
 	 * @param pa Points d'attaque de l'unité
 	 * @param pos Position de l'unité
@@ -61,7 +60,6 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 
 	/**
 	 * Changer les points de vie de l'unité
-	 * 
 	 * @param pointsVie Les points de vie de l'unité
 	 */
 	public void setPointsVie(int pointsVie)
@@ -71,7 +69,6 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 	
 	/**
 	 * Obtenir les points d'attaque de l'unité
-	 * 
 	 * @return les points d'attaque de l'unité
 	 */
 	public int getPointsAttaque()
@@ -81,7 +78,6 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 
 	/**
 	 * Obtenir les points de vie de l'unité
-	 * 
 	 * @return les points de vie de l'unité
 	 */
 	public int getPointsVie()
@@ -91,7 +87,6 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 	
 	/**
 	 * Obtenir un booléen à True si l'unité est morte, False sinon.
-	 * 
 	 * @return True si l'unité est morte, false sinon
 	 */
 	public boolean mort(){
@@ -103,8 +98,7 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 	}
 
 	/**
-	 * Redefinition de la méthode toString
-	 * 
+	 * Redéfinition de la méthode toString
 	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
@@ -113,10 +107,8 @@ public class Unite extends fr.iutvalence.java.projets.towerdefense.Element
 	}
 	
 	/**
-	 * Deplacer une unité sur le chemin de la matrice
-	 * 
-	 * @param unite 
-	 * @param matrice 
+	 * Déplacer une unité sur le chemin de la matrice
+	 * @param matrice La matrice conteant le chemin que l'unité est en train de parcourir
 	 */
 	public void deplacerUnite(Matrice matrice)
 	{

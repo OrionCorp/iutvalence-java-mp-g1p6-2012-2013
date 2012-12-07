@@ -2,6 +2,7 @@ package fr.iutvalence.java.projets.towerdefense.affichageInterface;
 import fr.iutvalence.java.projets.towerdefense.*;
 
 /**
+ * Classe Matrice, implémetant une interface.
  * Une matrice est une carte de jeu, elle est composée d'une taille (hauteur, largeur), d'un chemmin (définissant le
  * chemin que les unités devront suivre) ainsi qu'un background (décor de la carte du jeu)
  * 
@@ -45,7 +46,7 @@ public class MatriceInterface implements Affichage
 	private Decor[][] background;
 
 	/**
-	 * Genère une matrice d'une taille, d'un chemin et d'un background donnés
+	 * Générer une matrice d'une taille, d'un chemin et d'un background donnés
 	 * 
 	 * @param hauteur
 	 *            La hauteur de la matrice
@@ -66,7 +67,7 @@ public class MatriceInterface implements Affichage
 	}
 
 	/**
-	 * Renvoie une chaîne qui contient la représentation du background de la matrice en ascii-art
+	 * Obtenir une chaîne qui contient la représentation du background de la matrice en ascii-art
 	 * 
 	 * @see java.lang.Object#toString()
 	 */
@@ -87,6 +88,7 @@ public class MatriceInterface implements Affichage
 					case TERRE : res = res +"T"; break;
 					case TOWER : res = res +"O"; break;
 					case UNITE : res = res +"X"; break;
+					case QG : res = res + "G"; break;
 				}
 				
 				res = res + " ";
@@ -97,7 +99,7 @@ public class MatriceInterface implements Affichage
 	}
 
 	/**
-	 * Permet de connaître l'élément de la carte à des coordonnées données
+	 * Obtenir l'élément de la carte à des coordonnées données
 	 * 
 	 * @param c
 	 *            Un objet de type Coordonnées
@@ -114,7 +116,7 @@ public class MatriceInterface implements Affichage
 	}
 
 	/**
-	 * Permet de changer le background à des coordonnées données.
+	 * Changer le background à des coordonnées données.
 	 * @param c Coordonnées du point dont le background sera changé
 	 * @param background Nouveau décor 
 	 * @throws CoordonneesMatriceException Gère les exceptions au niveau des coordonnées des points
@@ -129,8 +131,7 @@ public class MatriceInterface implements Affichage
 	}
 	
 	/**
-	 * Permet d'obtenir la largeur de la carte
-	 * 
+	 * Obtenir la largeur de la carte
 	 * @return Entier représentant la largeur de la carte
 	 */
 	public int getLargeur()
@@ -139,8 +140,7 @@ public class MatriceInterface implements Affichage
 	}
 
 	/**
-	 * Permet d'obtenir la hauteur de la carte
-	 * 
+	 * Obtenir la hauteur de la carte
 	 * @return Entier représentant la hauteur de la carte
 	 */
 	public int getHauteur()
@@ -149,8 +149,7 @@ public class MatriceInterface implements Affichage
 	}
 
 	/**
-	 * Permet d'obtneir le chemin parcouru par les unités
-	 * 
+	 * Obtenir le chemin parcouru par les unités
 	 * @return Le chemin qui sera parcouru par les unités
 	 */
 	public Chemin getChemin()
@@ -160,7 +159,7 @@ public class MatriceInterface implements Affichage
 	
 	/** Ajoute un élément sur la matrice
 	 * @param element Un élément à placer sur la matrice
-	 * @throws CoordonneesMatriceException
+	 * @throws CoordonneesMatriceException Gérer une exception au niveau des coordonnées de la matrice
 	 */
 	public void placerElement(Element element) throws CoordonneesMatriceException{
 		
@@ -175,7 +174,7 @@ public class MatriceInterface implements Affichage
 	/**
 	 * Supprimer un élément de la matrice
 	 * @param element Une élément que l'on souhaite enlever de la matrice
-	 * @throws CoordonneesMatriceException
+	 * @throws CoordonneesMatriceException Gérer une exception au niveau des coordonnées de la matrice
 	 */
 	public void enleverElement(Element element) throws CoordonneesMatriceException{
 		
@@ -204,6 +203,7 @@ public class MatriceInterface implements Affichage
 					case TERRE : res = res +"T"; break;
 					case TOWER : res = res +"O"; break;
 					case UNITE : res = res +"X"; break;
+					case QG : res = res + "G"; break;
 				}
 				
 				res = res + " ";

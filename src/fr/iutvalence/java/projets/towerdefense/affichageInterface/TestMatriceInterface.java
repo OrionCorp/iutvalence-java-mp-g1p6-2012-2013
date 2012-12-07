@@ -47,14 +47,18 @@ public class TestMatriceInterface
 	 * 
 	 * @param args
 	 *            paramètre par défaut de main
+	 * @throws CoordonneesMatriceException  Gérer une exception au niveau des coordonnées de la matrice
 	 */
-	public static void main(String[] args)
+	public static void main(String[] args) throws CoordonneesMatriceException
 	{
 		Coordonnees pointDepart = new Coordonnees(4, 0);
+		
 		Deplacement[] parcours = new Deplacement[]
 			{ Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE,
 					Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE, Deplacement.DROITE };
+		
 		Chemin chemin = new Chemin(pointDepart, parcours);
+		
 		Decor[][] background = new Decor[][]
 			//@formatter:off
 			{
@@ -69,7 +73,9 @@ public class TestMatriceInterface
 						{ Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE,	Decor.TERRE, Decor.TERRE, Decor.TERRE, Decor.TERRE }, 
 			};
 		//@formatter:on
+		
 		MatriceInterface carte = new MatriceInterface(9, 10, chemin, background);
+		
 		// Affichage de la matrice
 		carte.Afficher();
 	}
